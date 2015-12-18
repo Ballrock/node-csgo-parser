@@ -1,0 +1,37 @@
+{
+  "name": "node-csgo-parser",
+  "version": "0.0.1",
+  "description": "Extract Items/Skins/... from raw VDF data files",
+  "main": "csgo-data-parser.js",
+  "readmeFilename": "README.md",
+  "private": false,
+  "directories": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Ballrock/node-csgo-parser.git"
+  },
+  "dependencies": {
+    "vdf": "^0.0.2",
+    "winston": "^2.1.1"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "jsdoc": "^3.4.0",
+    "minami": "^1.1.1",
+    "mocha": "*"
+  },
+  "scripts": {
+    "example": "node example.js",
+    "test": "mocha ./test/*.js",
+    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  },
+  "keywords": [
+    "csgo",
+    "skins",
+    "counter-strike",
+    "steam",
+    "valve"
+  ],
+  "author": "Ballrock",
+  "license": "ISC"
+}
