@@ -5,9 +5,9 @@ var fs = require('fs'),
 	parser = require('./csgo-data-parser'),
 	misc = require('./misc');
 
-var schemaFilePath = './in/data/schema.txt', 
-	langFilePath = './in/data/csgo_english.txt',
-	itemsFilePath = './in/data/items_game.txt',
+var schemaFilePath = './test/test-data/schema.txt', 
+	langFilePath = './test/test-data/csgo_english.txt',
+	itemsFilePath = './test/test-data/items_game.txt',
 	outDataFilePath = './out/data_' + Date.now() + '.json',
 	outLogFilePath = './out/logs/parser.log';
 
