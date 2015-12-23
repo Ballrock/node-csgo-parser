@@ -1,7 +1,7 @@
 'use strict';
 /* jshint node: true, mocha:true */
 
-var	misc = require('../misc');
+require('../misc');
 var assert = require('chai').assert;
 
 describe('CSGOParser Misc', function(){

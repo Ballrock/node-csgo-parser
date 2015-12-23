@@ -10,7 +10,6 @@ var schemaFilePath = 'test/test-data/schema.txt',
 	outLogFilePath = 'test.log';
 var csgoDataParser = new parser(schemaFilePath, langFilePath, itemsFilePath, 'error', outLogFilePath);
 
-
 describe('CSGOParser', function(){
 	describe('Unit Test', function(){
 		describe('Preparing CSGOParser',function() {

@@ -50,6 +50,10 @@ var regexIconCheck = /^(?:_[^_]{2}_)/m;
  *
  * @todo Generalization isDatasInitialized
  * @todo Little Endian ?
+ * @todo Items image download (unique method)
+ * @todo Generate technical unique id for each datas
+ * @todo Retrieve Item Quality
+ * @todo Datamining File for more informations
  */
 function CSGODataParser(schemaFilePath, langFilePath, itemsFilePath, logLevel, logFilePath) {
 	this.schemaFilePath = schemaFilePath;
