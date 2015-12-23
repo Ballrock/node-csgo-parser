@@ -92,11 +92,6 @@ CSGODataParser.prototype._generateObjectDataFromFiles = function() {
 	// ---- SCHEMA FILE --- 
 	var schemaFile = fs.readFileSync(this.schemaFilePath, 'utf8');
 	this.schemaData = vdf.parse(schemaFile);
-
-
-	var fd = fs.openSync('test.json', 'w');
-	fs.writeSync(fd, JSON.stringify(this.schemaData,null,4));
-	fs.closeSync(fd);
 };
 
 /**
