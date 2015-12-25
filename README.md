@@ -35,9 +35,9 @@ var csgoDataParser = new parser(schemaFilePath, langFilePath, itemsFilePath, 'de
 
 Must passing schema file (like *schema.txt*), language file (like *csgo_english.txt*) and item file (like *item_data.txt*) at VDF format
 
-- **Schema file** can be find in ![Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchema_v2)
+- **Schema file** can be find in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchema_v2)
 - **Language file** can be find in game data file (*steam-data*/csgo/resource/csgo_*language*.txt)
-- **Items File** can be find both in game data file () and in ![Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchemaURL_v2) (Note : You need do get the items_game_url information)
+- **Items File** can be find both in game data file () and in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchemaURL_v2) (Note : You need do get the items_game_url information)
 
 ### Example
 
