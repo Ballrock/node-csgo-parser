@@ -167,6 +167,19 @@ describe('CSGOParser', function(){
 				csgoDataParser.langData = oldLang;
 			});
 		});
+		describe('Public function getLogger', function(){
+			var oldLog = csgoDataParser.logger;
+			it('Logger Defined', function() {
+				var returnObject = csgoDataParser.getLogger();
+				assert.isDefined(returnObject);
+			});
+			it('Logger Not Defined', function() {
+				csgoDataParser.logger = undefined;
+				var returnObject = csgoDataParser.getLogger();
+				assert.isUndefined(returnObject);
+				csgoDataParser.logger = oldLog;
+			});
+		});
 	});
 	describe('Integration Test', function(){
 		this.timeout(0);
