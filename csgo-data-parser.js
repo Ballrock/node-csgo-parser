@@ -44,12 +44,12 @@ var regexIconCheck = /^(?:_[^_]{2}_)/m;
  * @param {String} schemaFilePath Path to schema file.
  * @param {String} langFilePath Path to csgo_*lang* file.
  * @param {String} itemsFilePath Path to items_game file.
- * @param {String} logLevel Winston Log Level, if > info no timing data for generation.
+ * @param {String} logLevel Winston Log Level, if > info no timing data for generations.
  * @param {String} logFilePath Choosen file path to write logs.
  * @constructor 
  *
  * @todo Generalization isDatasInitialized
- * @todo Little Endian ?
+ * @todo Better handle of Little Endian for vdf / Hack dependency
  * @todo Items image download (unique method)
  * @todo Generate technical unique id for each datas
  * @todo Retrieve Item Quality
