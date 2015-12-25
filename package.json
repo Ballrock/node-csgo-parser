@@ -1,6 +1,6 @@
 {
   "name": "node-csgo-parser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extract Items/Skins/... from raw VDF data files",
   "main": "csgo-data-parser.js",
   "readmeFilename": "README.md",
