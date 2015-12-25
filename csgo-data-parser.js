@@ -174,7 +174,7 @@ CSGODataParser.prototype._cleanCompositeIconName = function (icon, weaponTechNam
 	var data = regexIcon.exec(icon)[1];
 	var pos = data.indexOf(weaponTechName);
 
-	if (pos != -1) {
+	if (pos !== -1) {
 		if (data.slice(weaponTechName.length).match(regexIconCheck)) {
 			result.status = true;
 			result.weaponTechName = weaponTechName;

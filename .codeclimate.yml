@@ -1,0 +1,19 @@
+---
+engines:
+  eslint:
+    enabled: true
+    checks:
+      no-extend-native:
+        enabled: false
+      no-eq-null:
+        enabled: false
+      no-eq-null:
+        enabled: false
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.js"
+  - "**.jsx"
+exclude_paths:
+- test/**/*
