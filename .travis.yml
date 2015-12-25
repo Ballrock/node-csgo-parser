@@ -8,3 +8,5 @@ node_js:
   - "0.11"
   - "0.10"
   - "iojs"
+after_script:
+  - codeclimate-test-reporter < lcov.info
