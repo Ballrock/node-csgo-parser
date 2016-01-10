@@ -459,14 +459,14 @@ CSGODataParser.prototype.getStickers = function() {
 	self.logger.info('-----------------------------------------');
 	self.logger.info('');
 
-	var stickers=[];
+	var stickers={};
 	var rawstickers = this.itemsData.items_game.sticker_kits;
 	
 	Object.keys(rawstickers).forEach(function(key){
 		//Remove the default Sticker by remove 0 key
 		if (key !== '0') {
 			var timerStickers = misc.generateTimer();
-			stickers.pushUnique(self.getLangValue(rawstickers[key].item_name));
+			stickers[key] = {'sticker_name':self.getLangValue(rawstickers[key].item_name)};
 			self.logger.info('Fetch ' + rawstickers[key].item_name + ' sticker [' + misc.resultTimer(timerStickers) +'s]');
 		}
 	});
