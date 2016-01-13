@@ -8,6 +8,8 @@
 
 Extract Items/Skins/... from raw VDF data files
 
+Note : Only compatible with ES6 NodeJS (iojs, node 4.0+)
+
 ---
 ## TODOs
 
