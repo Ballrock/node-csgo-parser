@@ -4,7 +4,7 @@
         "dictionaries": ["jsdoc"]
     },
     "source": {
-        "include": ["package.json", "csgo-data-parser.js", "misc.js"],
+        "include": ["package.json", "csgo-data-parser.js", "./lib/"],
         "excludePattern": "(node_modules/|docs|test/|out/)"
     },
     "plugins": [],
@@ -15,7 +15,7 @@
     "opts": {
         "destination": "./out/docs/",
         "encoding": "utf8",
-        "private": true,
+        "private": false,
         "recurse": true,
         "template": "./node_modules/minami"
     }
