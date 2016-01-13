@@ -101,11 +101,11 @@ describe('CSGOParser', function(){
 			var testWpOK = 'weapon_deagle';
 			var testWpKO = 'weapon_deagle_ko';
 			it('Must return at least 1 skin', function() {
-				var returnArray = csgoDataParser._getSkinByWeapon(testWpOK);
+				var returnArray = csgoDataParser._getSkinsByWeapon(testWpOK);
 				assert.operator(returnArray.length, '>', 1);
 			});
 			it('Must return 0 result', function() {
-				var returnArray = csgoDataParser._getSkinByWeapon(testWpKO);
+				var returnArray = csgoDataParser._getSkinsByWeapon(testWpKO);
 				assert.equal(returnArray.length, 0);
 			});
 		});
