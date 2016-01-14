@@ -19,6 +19,8 @@ Note : Only compatible with ES6 NodeJS (iojs, node 4.0+)
 - [ ] Datamining File for more informations
 - [ ] DEBUG - Better Handle of Knifes and Rarities (My god, need so much hack ><. Volvo... that's not really clean ^^')
 - [ ] To ES6
+- [ ] Optimize Performances
+- [ ] defindex to int ?
 
 ## Installation
 
@@ -80,7 +82,7 @@ A sample script is at `example.js`.
 Return the parser's logger.
 
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
-**Returns**: <code>winston.Logger</code> - Winston based Parser's Logger.  
+**Returns**: <code>winston.Logger</code> - Winston based Parser's Logger.
 **Access:** public  
 <a name="CSGODataParser+isDatasInitialized"></a>
 ### csgoDataParser.isDatasInitialized() ⇒ <code>boolean</code>
@@ -165,5 +167,3 @@ Generate Rarities index.
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
 **Returns**: <code>Array.&lt;Rarity&gt;</code> - List of Rarity objects. One object represent one rarity.  
 **Access:** public  
-
-

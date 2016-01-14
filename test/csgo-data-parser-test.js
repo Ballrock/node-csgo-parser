@@ -225,5 +225,18 @@ describe('CSGOParser', function(){
 				assert.operator(returnObject.length, '>', 10);
 			});
 		});
+		describe('Public function getRaritiesIndex', function(){
+			var returnObject = csgoDataParser.getRaritiesIndex();
+			it('Rarities Index List', function() {
+				assert.operator(returnObject.length, '>', 4);
+			});
+			it('Rarities Index Unusual Test', function() {
+				returnObject.forEach(function(element) {
+					if(element.techName === 'unusual'){
+						assert.equal(element.weaponName.indexOf('★ '), 0);
+					}
+				});
+			});
+		});
 	});
 });

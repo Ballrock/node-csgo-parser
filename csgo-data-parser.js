@@ -60,6 +60,8 @@ var regexIconCheck = /^(?:_[^_]{2}_)/m;
  * @todo Datamining File for more informations
  * @todo DEBUG - Better Handle of Knifes and Rarities (My god, need so much hack ><. Volvo... that's not really clean ^^')
  * @todo To ES6
+ * @todo Optimize Performances
+ * @todo defindex to int ?
  */
 class CSGODataParser {
 
@@ -602,7 +604,8 @@ class CSGODataParser {
 			}
 			rarity.miscName = self.getLangValue(rawrarities[key].loc_key);
 			rarity.color = rawcolors[rawrarities[key].color].hex_color;
-			rarities.pushUnique(rarity);
+			rarity.defIndex = rawrarities[key].value;
+			rarities.push(rarity);
 			self.logger.info('Fetch ' + key + ' rarity [' + misc.resultTimer(timerRarity) +'s]');
 		});
 
