@@ -133,15 +133,18 @@ class CSGODataParser {
 	 * @return {String} Paint Name.
 	 * @private
 	 */
-	_getPaintNameFromTechnicalName(techName) {
+	_getPaintNameAndDefIndexFromTechnicalName(techName) {
 		/*jshint camelcase: false */
 		var self = this;
 
-		var findPaint;
+		var findPaint=[];
+		findPaint[0] = undefined;
+		findPaint[1] = undefined;
 		var paintkits = this.itemsData.items_game.paint_kits;
 		Object.keys(paintkits).forEach(function(key){
 			if (paintkits[key].name === techName) {
-				findPaint = self.getLangValue(paintkits[key].description_tag);
+				findPaint[0] = self.getLangValue(paintkits[key].description_tag);
+				findPaint[1] = key;
 			}
 		});
 		return findPaint;
@@ -164,9 +167,11 @@ class CSGODataParser {
 	 		var skin = new SkinPaint();
 	 		var datas = self._cleanCompositeIconName(icons[key].icon_path, techName);
 	 		if (datas.status) {
-	 			skin.name = self._getPaintNameFromTechnicalName(datas.skinTechName);
+	 			var skinInfo = self._getPaintNameAndDefIndexFromTechnicalName(datas.skinTechName);
+	 			skin.name = skinInfo[0];
 	 			skin.techName = datas.skinTechName;
 	 			skin.weaponTechName = techName;
+	 			skin.defIndex = skinInfo[1];
 	 			//Hack for melee weapon :s
 	 			if (type === '#CSGO_Type_Knife') {
 					skin.fullName = '★ ' + self._getWeaponNameFromTechnicalName(techName) + ' | ' + skin.name;
@@ -404,10 +409,12 @@ class CSGODataParser {
 			Object.keys(valuecollection.items).forEach(function(keyitem){
 				var skin=new SkinPaint();
 				var values = regexItem.exec(keyitem);
-				skin.name = self._getPaintNameFromTechnicalName(values[1]);
+				var skinInfo = self._getPaintNameAndDefIndexFromTechnicalName(values[1]);
+				skin.name = skinInfo[0];
 				skin.techName = values[1];
 				skin.weaponTechName = values[2];
 				skin.fullName = self._getWeaponNameFromTechnicalName(values[2]) + ' | ' + skin.name;
+				skin.defIndex = skinInfo[1];
 				skin.rarity = self._getRarityFromPaintTechnicalName(values[1]);
 				collection.content.push(skin);
 			});

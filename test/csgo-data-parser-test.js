@@ -76,24 +76,28 @@ describe('CSGOParser', function(){
 				csgoDataParser.langData = oldLang;
 			});
 		});
-		describe('Private function _getPaintNameFromTechnicalName', function(){
+		describe('Private function _getPaintNameAndDefIndexFromTechnicalName', function(){
 			var oldLang = csgoDataParser.langData;
 			var testPaintOK = 'cu_m4a1_hyper_beast';
-			var returnOK = 'Hyper Beast';
+			var returnNameOK = 'Hyper Beast';
+			var returnDefIndexOk = '430';
 			var testPaintKO = 'cu_m4a1_hyper_beast_ko';
 			var returnNoLang = '#PaintKit_cu_m4a1_hyper_beast_Tag';
-			it('Must return \'Hyper Beast\'', function() {
-				var returnName = csgoDataParser._getPaintNameFromTechnicalName(testPaintOK);
-				assert.equal(returnName,returnOK);
+			it('Must return \'Hyper Beast\' and 430', function() {
+				var returnName = csgoDataParser._getPaintNameAndDefIndexFromTechnicalName(testPaintOK);
+				assert.equal(returnName[0],returnNameOK);
+				assert.equal(returnName[1],returnDefIndexOk);
 			});
 			it('Must return \'undefined\'', function() {
-				var returnName = csgoDataParser._getPaintNameFromTechnicalName(testPaintKO);
-				assert.isUndefined(returnName);
+				var returnName = csgoDataParser._getPaintNameAndDefIndexFromTechnicalName(testPaintKO);
+				assert.isUndefined(returnName[0]);
+				assert.isUndefined(returnName[1]);
 			});
-			it('Must return \'#PaintKit_cu_m4a1_hyper_beast_Tag\'', function() {
+			it('Must return \'#PaintKit_cu_m4a1_hyper_beast_Tag\' and 430', function() {
 				csgoDataParser.langData = undefined;
-				var returnName = csgoDataParser._getPaintNameFromTechnicalName(testPaintOK);
-				assert.equal(returnName,returnNoLang);
+				var returnName = csgoDataParser._getPaintNameAndDefIndexFromTechnicalName(testPaintOK);
+				assert.equal(returnName[0],returnNoLang);
+				assert.equal(returnName[1],returnDefIndexOk);
 				csgoDataParser.langData = oldLang;
 			});
 		});
