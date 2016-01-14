@@ -2,7 +2,7 @@
 /* jshint node: true */
 
 var fs = require('fs'),
-	parser = require('./csgo-data-parser'),
+	parser = require('./lib/csgo-data-parser'),
 	misc = require('./lib/miscHelper');
 
 var schemaFilePath = './test/test-data/schema.txt', 

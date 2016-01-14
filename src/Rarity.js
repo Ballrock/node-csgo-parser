@@ -7,7 +7,7 @@
  * @property {String} techName Technical name of the rarity
  * @property {String} weaponName I18N name applied to a weapon
  * @property {String} miscName I18N name applied to others objects (Medal, Music, ...)
- * @property {String} defIndex
+ * @property {String} defIndex defIndex Index/Key of the Perfab Object
  * @property {String} color Hexadecimal color value that represent the quality
  */
 

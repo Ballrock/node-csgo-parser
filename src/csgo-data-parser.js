@@ -5,13 +5,13 @@
 var vdf = require('vdf'),
 	fs = require('fs'),
 	winston = require('winston'),
-	misc = require('./lib/miscHelper'),
-	Weapon = require('./lib/Weapon.js'),
-	Collection = require('./lib/Collection.js'),
-	Rarity = require('./lib/Rarity.js'),
-	Sticker = require('./lib/Sticker.js'),
-	SkinPaint = require('./lib/SkinPaint.js'),
-	MusicKit = require('./lib/MusicKit.js');
+	misc = require('./miscHelper'),
+	Weapon = require('./Weapon.js'),
+	Collection = require('./Collection.js'),
+	Rarity = require('./Rarity.js'),
+	Sticker = require('./Sticker.js'),
+	SkinPaint = require('./SkinPaint.js'),
+	MusicKit = require('./MusicKit.js');
 
 /**
  * Hardcoded Exteriors Keys List --> Thx Valve :s.
