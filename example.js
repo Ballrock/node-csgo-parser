@@ -23,7 +23,11 @@ infos.cases = csgoDataParser.getCases();
 infos.casekeys = csgoDataParser.getCaseKeys();
 infos.stickers = csgoDataParser.getStickers();
 infos.musickits = csgoDataParser.getMusicKits();
+<<<<<<< HEAD
 infos.rarities = csgoDataParser.getRarities();
+=======
+infos.raritiesIndex = csgoDataParser.getRaritiesIndex();
+>>>>>>> refs/remotes/Ballrock/master
 
 csgoDataParser.getLogger().info('');
 csgoDataParser.getLogger().info('-----------------------------------------');

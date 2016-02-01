@@ -1,7 +1,7 @@
 'use strict';
 /* jshint node: true, mocha:true */
 
-var	parser = require('../csgo-data-parser');
+var	parser = require('../lib/csgo-data-parser');
 var assert = require('chai').assert;
 
 var schemaFilePath = 'test/test-data/schema.txt', 
@@ -76,24 +76,28 @@ describe('CSGOParser', function(){
 				csgoDataParser.langData = oldLang;
 			});
 		});
-		describe('Private function _getPaintNameFromTechnicalName', function(){
+		describe('Private function _getPaintNameAndDefIndexFromTechnicalName', function(){
 			var oldLang = csgoDataParser.langData;
 			var testPaintOK = 'cu_m4a1_hyper_beast';
-			var returnOK = 'Hyper Beast';
+			var returnNameOK = 'Hyper Beast';
+			var returnDefIndexOk = '430';
 			var testPaintKO = 'cu_m4a1_hyper_beast_ko';
 			var returnNoLang = '#PaintKit_cu_m4a1_hyper_beast_Tag';
-			it('Must return \'Hyper Beast\'', function() {
-				var returnName = csgoDataParser._getPaintNameFromTechnicalName(testPaintOK);
-				assert.equal(returnName,returnOK);
+			it('Must return \'Hyper Beast\' and 430', function() {
+				var returnName = csgoDataParser._getPaintNameAndDefIndexFromTechnicalName(testPaintOK);
+				assert.equal(returnName[0],returnNameOK);
+				assert.equal(returnName[1],returnDefIndexOk);
 			});
 			it('Must return \'undefined\'', function() {
-				var returnName = csgoDataParser._getPaintNameFromTechnicalName(testPaintKO);
-				assert.isUndefined(returnName);
+				var returnName = csgoDataParser._getPaintNameAndDefIndexFromTechnicalName(testPaintKO);
+				assert.isUndefined(returnName[0]);
+				assert.isUndefined(returnName[1]);
 			});
-			it('Must return \'#PaintKit_cu_m4a1_hyper_beast_Tag\'', function() {
+			it('Must return \'#PaintKit_cu_m4a1_hyper_beast_Tag\' and 430', function() {
 				csgoDataParser.langData = undefined;
-				var returnName = csgoDataParser._getPaintNameFromTechnicalName(testPaintOK);
-				assert.equal(returnName,returnNoLang);
+				var returnName = csgoDataParser._getPaintNameAndDefIndexFromTechnicalName(testPaintOK);
+				assert.equal(returnName[0],returnNoLang);
+				assert.equal(returnName[1],returnDefIndexOk);
 				csgoDataParser.langData = oldLang;
 			});
 		});
@@ -101,11 +105,11 @@ describe('CSGOParser', function(){
 			var testWpOK = 'weapon_deagle';
 			var testWpKO = 'weapon_deagle_ko';
 			it('Must return at least 1 skin', function() {
-				var returnArray = csgoDataParser._getSkinByWeapon(testWpOK);
+				var returnArray = csgoDataParser._getSkinsByWeapon(testWpOK);
 				assert.operator(returnArray.length, '>', 1);
 			});
 			it('Must return 0 result', function() {
-				var returnArray = csgoDataParser._getSkinByWeapon(testWpKO);
+				var returnArray = csgoDataParser._getSkinsByWeapon(testWpKO);
 				assert.equal(returnArray.length, 0);
 			});
 		});
@@ -223,6 +227,19 @@ describe('CSGOParser', function(){
 			it('Music Kits List', function() {
 				var returnObject = csgoDataParser.getMusicKits();
 				assert.operator(returnObject.length, '>', 10);
+			});
+		});
+		describe('Public function getRaritiesIndex', function(){
+			var returnObject = csgoDataParser.getRaritiesIndex();
+			it('Rarities Index List', function() {
+				assert.operator(returnObject.length, '>', 4);
+			});
+			it('Rarities Index Unusual Test', function() {
+				returnObject.forEach(function(element) {
+					if(element.techName === 'unusual'){
+						assert.equal(element.weaponName.indexOf('★ '), 0);
+					}
+				});
 			});
 		});
 	});

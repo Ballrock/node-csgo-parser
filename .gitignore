@@ -31,6 +31,9 @@ node_modules
 out
 in
 
+# Compiled sources Directory
+lib
+
 # =========================
 # Operating System Files
 # =========================
