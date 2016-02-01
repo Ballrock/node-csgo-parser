@@ -2,8 +2,8 @@
 /* jshint node: true */
 
 var fs = require('fs'),
-	parser = require('./csgo-data-parser'),
-	misc = require('./misc');
+	parser = require('./lib/csgo-data-parser'),
+	misc = require('./lib/miscHelper');
 
 var schemaFilePath = './test/test-data/schema.txt', 
 	langFilePath = './test/test-data/csgo_english.txt',
@@ -23,6 +23,7 @@ infos.cases = csgoDataParser.getCases();
 infos.casekeys = csgoDataParser.getCaseKeys();
 infos.stickers = csgoDataParser.getStickers();
 infos.musickits = csgoDataParser.getMusicKits();
+infos.rarities = csgoDataParser.getRarities();
 
 csgoDataParser.getLogger().info('');
 csgoDataParser.getLogger().info('-----------------------------------------');
