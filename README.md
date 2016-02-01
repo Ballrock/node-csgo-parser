@@ -11,12 +11,14 @@ Extract Items/Skins/... from raw VDF data files
 ---
 ## TODOs
 
+- [ ] Refactoring... This file will be too long
 - [ ] Generalization isDatasInitialized
 - [ ] Better handle of Little Endian for vdf / Hack dependency
-- [ ] Items image download (unique method)
-- [ ] Generate technical unique id for each datas
-- [ ] Retrieve Item Quality
 - [ ] Datamining File for more informations
+- [ ] DEBUG - Better Handle of Knifes and Rarities (My god, need so much hack ><. Volvo... that's not really clean ^^')
+- [ ] To ES6
+- [ ] Optimize Performances
+- [ ] defindex to int ?
 
 ## Installation
 
@@ -35,11 +37,11 @@ var schemaFilePath = './test/test-data/schema.txt',
 var csgoDataParser = new parser(schemaFilePath, langFilePath, itemsFilePath, 'debug', outLogFilePath);
 ```
 
-Must passing schema file (like *schema.txt*), language file (like *csgo_english.txt*) and item file (like *item_data.txt*) at VDF format
+Must pass schema file (like *schema.txt*), language file (like *csgo_english.txt*) and item file (like *item_data.txt*) at VDF format
 
 - **Schema file** can be find in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchema_v2)
-- **Language file** can be find in game data file (*steam-data*/csgo/resource/csgo_*language*.txt)
-- **Items File** can be find both in game data file () and in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchemaURL_v2) (Note : You need do get the items_game_url information)
+- **Language file** can be find in game data files (*steam-data*/csgo/resource/csgo_*language*.txt)
+- **Items File** can be find both in game data files () and in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchemaURL_v2) (Note : You need do get the items_game_url information)
 
 ### Example
 
@@ -53,18 +55,17 @@ A sample script is at `example.js`.
     * [.isDatasInitialized()](#CSGODataParser+isDatasInitialized) ⇒ <code>boolean</code>
     * [.isLangInitialized()](#CSGODataParser+isLangInitialized) ⇒ <code>boolean</code>
     * [.getLangValue(keyLang)](#CSGODataParser+getLangValue) ⇒ <code>String</code>
-    * [.getWeapons()](#CSGODataParser+getWeapons) ⇒ <code>Array</code>
-    * [.getCollections()](#CSGODataParser+getCollections) ⇒ <code>Array</code>
-    * [.getExteriors()](#CSGODataParser+getExteriors) ⇒ <code>Array</code>
-    * [.getCases()](#CSGODataParser+getCases) ⇒ <code>Array</code>
-    * [.getCaseKeys()](#CSGODataParser+getCaseKeys) ⇒ <code>Array</code>
-    * [.getStickers()](#CSGODataParser+getStickers) ⇒ <code>Array</code>
-    * [.getMusicKits()](#CSGODataParser+getMusicKits) ⇒ <code>Array</code>
+    * [.getWeapons()](#CSGODataParser+getWeapons) ⇒ <code>Array.&lt;Weapon&gt;</code>
+    * [.getCollections()](#CSGODataParser+getCollections) ⇒ <code>Array.&lt;Collection&gt;</code>
+    * [.getExteriors()](#CSGODataParser+getExteriors) ⇒ <code>Array.&lt;String&gt;</code>
+    * [.getCases()](#CSGODataParser+getCases) ⇒ <code>Array.&lt;Prefab&gt;</code>
+    * [.getCaseKeys()](#CSGODataParser+getCaseKeys) ⇒ <code>Array.&lt;Prefab&gt;</code>
+    * [.getStickers()](#CSGODataParser+getStickers) ⇒ <code>Array.&lt;Sticker&gt;</code>
+    * [.getMusicKits()](#CSGODataParser+getMusicKits) ⇒ <code>Array.&lt;MusicKit&gt;</code>
+    * [.getRaritiesIndex()](#CSGODataParser+getRaritiesIndex) ⇒ <code>Array.&lt;Rarity&gt;</code>
 
 <a name="new_CSGODataParser_new"></a>
 ### new CSGODataParser(schemaFilePath, langFilePath, itemsFilePath, logLevel, logFilePath)
-Parser of CSGOData.
-
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -79,7 +80,7 @@ Parser of CSGOData.
 Return the parser's logger.
 
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
-**Returns**: <code>winston.Logger</code> - Winston based Parser's Logger.  
+**Returns**: <code>winston.Logger</code> - Winston based Parser's Logger.
 **Access:** public  
 <a name="CSGODataParser+isDatasInitialized"></a>
 ### csgoDataParser.isDatasInitialized() ⇒ <code>boolean</code>
@@ -108,52 +109,59 @@ Get the lang value from valve key i18n values.
 | keyLang | <code>String</code> | valve key i18n values (like #PaintKit_aa_fade_Tag) |
 
 <a name="CSGODataParser+getWeapons"></a>
-### csgoDataParser.getWeapons() ⇒ <code>Array</code>
+### csgoDataParser.getWeapons() ⇒ <code>Array.&lt;Weapon&gt;</code>
 Generate bases Weapons data from schema's data.
 
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
-**Returns**: <code>Array</code> - List of Objects. One object represent one Weapon.  
+**Returns**: <code>Array.&lt;Weapon&gt;</code> - List of Objects. One object represent one Weapon.  
 **Access:** public  
 <a name="CSGODataParser+getCollections"></a>
-### csgoDataParser.getCollections() ⇒ <code>Array</code>
+### csgoDataParser.getCollections() ⇒ <code>Array.&lt;Collection&gt;</code>
 Generate collection's data from itemsgame's data.
 
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
-**Returns**: <code>Array</code> - List of Objects. One object represent one Weapon.  
+**Returns**: <code>Array.&lt;Collection&gt;</code> - List of Collections. One object represent one Collection.  
 **Access:** public  
 <a name="CSGODataParser+getExteriors"></a>
-### csgoDataParser.getExteriors() ⇒ <code>Array</code>
+### csgoDataParser.getExteriors() ⇒ <code>Array.&lt;String&gt;</code>
 Generate exteriors.
 
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
-**Returns**: <code>Array</code> - List of String. One string represent one exterior type.  
+**Returns**: <code>Array.&lt;String&gt;</code> - One string represent one exterior type - I18N Name  
 **Access:** public  
 <a name="CSGODataParser+getCases"></a>
-### csgoDataParser.getCases() ⇒ <code>Array</code>
+### csgoDataParser.getCases() ⇒ <code>Array.&lt;Prefab&gt;</code>
 Generate Weapon/Stickers skin Case list.
 
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
-**Returns**: <code>Array</code> - List of String. One string represent one case.  
+**Returns**: <code>Array.&lt;Prefab&gt;</code> - List of Object. One object represent one case  
 **Access:** public  
 <a name="CSGODataParser+getCaseKeys"></a>
-### csgoDataParser.getCaseKeys() ⇒ <code>Array</code>
+### csgoDataParser.getCaseKeys() ⇒ <code>Array.&lt;Prefab&gt;</code>
 Generate Weapon/Stickers skin Case keys list.
 
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
-**Returns**: <code>Array</code> - List of String. One string represent one case key.  
+**Returns**: <code>Array.&lt;Prefab&gt;</code> - List of Object. One object represent one case key  
 **Access:** public  
 <a name="CSGODataParser+getStickers"></a>
-### csgoDataParser.getStickers() ⇒ <code>Array</code>
+### csgoDataParser.getStickers() ⇒ <code>Array.&lt;Sticker&gt;</code>
 Generate Stickers list.
+Note : Some unknown stickers are present in the item_game file so they have a rarity set to "default" (id 2 to 12)
 
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
-**Returns**: <code>Array</code> - List of String. One string represent one sticker.  
+**Returns**: <code>Array.&lt;Sticker&gt;</code> - List of Sticker. One object represent one sticker  
 **Access:** public  
 <a name="CSGODataParser+getMusicKits"></a>
-### csgoDataParser.getMusicKits() ⇒ <code>Array</code>
+### csgoDataParser.getMusicKits() ⇒ <code>Array.&lt;MusicKit&gt;</code>
 Generate MusicKits list.
 
 **Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
-**Returns**: <code>Array</code> - List of String. One string represent one music kit  
+**Returns**: <code>Array.&lt;MusicKit&gt;</code> - List of MusicKit. One object represent one music kit  
 **Access:** public  
+<a name="CSGODataParser+getRaritiesIndex"></a>
+### csgoDataParser.getRaritiesIndex() ⇒ <code>Array.&lt;Rarity&gt;</code>
+Generate Rarities index.
 
+**Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
+**Returns**: <code>Array.&lt;Rarity&gt;</code> - List of Rarity objects. One object represent one rarity.  
+**Access:** public  

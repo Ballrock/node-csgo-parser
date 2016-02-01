@@ -1,12 +1,12 @@
 'use strict';
 
 /**
- * @private
  * Prototype Object
  * Normalized search in keys (Valve seems to like put different case type between lang file and schema).
  * @this {Object} Object to get value of
  * @param {String} Unnormalized value 
  * @return {Object} Data.
+ * @private
  */
 Object.defineProperty(Object.prototype, 'getValue', {
     value: function (prop) {
@@ -15,16 +15,17 @@ Object.defineProperty(Object.prototype, 'getValue', {
             if (key.toLowerCase() === prop.toLowerCase()) {
                 return self[key];
             }
+            
         }
     }
 });
 
 /**
- * @private
  * Prototype String
  * Remove # on i18n key for lang search.
  * @this {String} i18n key
  * @return {String} i18n key without #.
+ * @private
  */
 Object.defineProperty(String.prototype, 'prepareLang', {
 	value: function() {
@@ -37,10 +38,10 @@ Object.defineProperty(String.prototype, 'prepareLang', {
 });
 
 /**
- * @private
  * Prototype Array
  * HashTable light implementation, only push once. If object already present, do nothing
  * @this {Array} HashTable Array
+ * @private
  */
 Object.defineProperty(Array.prototype, 'pushUnique', {
 	value: function(value) {
@@ -58,12 +59,33 @@ Object.defineProperty(Array.prototype, 'pushUnique', {
 });
 
 /**
+ * Prototype Array
+ * HashTable light implementation, only push once named object. If object already present, do nothing
+ * @this {Array} HashTable Array
  * @private
+ */
+Object.defineProperty(Array.prototype, 'pushUniqueNamedObject', {
+	value: function(value) {
+		var self=this;
+		var isPresent = false;
+		for (var key in self) {
+			if (value.name === self[key].name) {
+				isPresent = true;
+			}
+		}
+		if (!isPresent) {
+			self.push(value);
+		}
+	}
+});
+
+/**
  * Prototype String
  * Split itself on space to check if value is present
  * @this {String} String to check on split
  * @param {String} value Value to check in this
  * @return {boolean} true if present, false otherwise
+ * @private
  */
 Object.defineProperty(String.prototype, 'containsOnSpaceSplit', {
 	value: function(value) {
@@ -80,19 +102,19 @@ Object.defineProperty(String.prototype, 'containsOnSpaceSplit', {
 });
 
 /**
- * @private
  * Generate a timer
  * @return {Array} Returns the current high-resolution real time in a [seconds, nanoseconds] tuple Array. 
+ * @private
  */
 exports.generateTimer = function(){
     return process.hrtime();
 };
 
 /**
- * @private
  * Get the result diff timer
  * @param {Array} timer to diff with
  * @return {Float} Diff. 
+ * @private
  */
 exports.resultTimer = function(timer){
     var diff = process.hrtime(timer);

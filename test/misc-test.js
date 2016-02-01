@@ -1,7 +1,7 @@
 'use strict';
 /* jshint node: true, mocha:true */
 
-require('../misc');
+require('../lib/miscHelper');
 var assert = require('chai').assert;
 
 describe('CSGOParser Misc', function(){
@@ -65,6 +65,23 @@ describe('CSGOParser Misc', function(){
 		});
 		it('push second element', function() {
 			table.pushUnique('test2');
+			assert.equal(table.length, 2);
+		});
+	});
+	describe('Private Array Prototype pushUniqueNamedObject', function() {
+		var table=[];
+		var element1={name:'test1'};
+		var element2={name:'test2'};
+		it('push first element', function() {
+			table.pushUniqueNamedObject(element1);
+			assert.equal(table.length, 1);
+		});
+		it('unique element', function() {
+			table.pushUniqueNamedObject(element1);
+			assert.equal(table.length, 1);
+		});
+		it('push second element', function() {
+			table.pushUniqueNamedObject(element2);
 			assert.equal(table.length, 2);
 		});
 	});
