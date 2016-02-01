@@ -413,6 +413,7 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalWeapons + ' weapons [' + misc.resultTimer(timer) +'s]');
 		return weapons;
 	}
+	getWeaponsIndexed(){ return this.getWeapons(true);}
 
 	/**
 	 * Generate collection's data from itemsgame's data.
@@ -470,6 +471,7 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalCollection + ' collections [' + misc.resultTimer(timer) +'s]');
 		return collections;
 	}
+	getCollectionsIndexed(){ return this.getCollections(true);}
 
 	/**
 	 * Generate exteriors.
@@ -527,6 +529,7 @@ class CSGODataParser {
 		return cases;
 	
 	}
+	getCasesIndexed(){ return this.getCases(true);}
 
 	/**
 	 * Generate Weapon/Stickers skin Case keys list.
@@ -548,6 +551,7 @@ class CSGODataParser {
 
 		return casekeys;
 	}
+	getCaseKeysIndexed(){ return this.getCaseKeys(true);}
 
 	/**
 	 * Generate Stickers list.
@@ -604,6 +608,7 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalStickers + ' stickers [' + misc.resultTimer(timer) +'s]');
 		return stickers;
 	} 
+	getStickersIndexed(){ return this.getStickers(true);}
 	
 	/**
 	 * Generate MusicKits list.
@@ -649,6 +654,7 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalMusics + ' music kits [' + misc.resultTimer(timer) +'s]');
 		return musics;
 	}
+	getMusicKitsIndexed(){ return this.getMusicKits(true);}
 	
 	/**
 	 * Generate Rarities index.
@@ -703,5 +709,6 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalRarity + ' rarity [' + misc.resultTimer(timer) +'s]');
 		return rarities;
 	}
+	getRaritiesIndexed(){ return this.getRarities(true);}
 }
 module.exports = CSGODataParser;
