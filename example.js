@@ -23,7 +23,7 @@ infos.cases = csgoDataParser.getCases();
 infos.casekeys = csgoDataParser.getCaseKeys();
 infos.stickers = csgoDataParser.getStickers();
 infos.musickits = csgoDataParser.getMusicKits();
-infos.raritiesIndex = csgoDataParser.getRaritiesIndex();
+infos.rarities = csgoDataParser.getRarities();
 
 csgoDataParser.getLogger().info('');
 csgoDataParser.getLogger().info('-----------------------------------------');
