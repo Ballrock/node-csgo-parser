@@ -230,7 +230,7 @@ describe('CSGOParser', function(){
 			});
 		});
 		describe('Public function getRaritiesIndex', function(){
-			var returnObject = csgoDataParser.getRaritiesIndex();
+			var returnObject = csgoDataParser.getRarities();
 			it('Rarities Index List', function() {
 				assert.operator(returnObject.length, '>', 4);
 			});
