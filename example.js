@@ -18,6 +18,7 @@ var timer = misc.generateTimer();
 var infos={};
 infos.baseWeapons = csgoDataParser.getWeapons();
 infos.exteriors = csgoDataParser.getExteriors();
+infos.origins = csgoDataParser.getOrigins();
 infos.collections = csgoDataParser.getCollections();
 infos.cases = csgoDataParser.getCases();
 infos.casekeys = csgoDataParser.getCaseKeys();
