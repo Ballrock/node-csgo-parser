@@ -91,7 +91,7 @@ class CSGODataParser {
 		this.langData = vdf.parse(langFile);
 		//Hack for tought Little Indian Character in object name after VDF.parse
 		//Little Indian Character here "-->\"lang\""
-		var littleEndianName = '\uFEFF' + '\"lang\"';
+		var littleEndianName = '\uFEFF\"lang\"';
 		this.langData.lang = this.langData[littleEndianName];
 		delete this.langData[littleEndianName];
 
@@ -546,20 +546,23 @@ class CSGODataParser {
 		self.logger.info('--------- Cases List Generation ---------');
 		self.logger.info('-----------------------------------------');
 		self.logger.info('');
+		var case1,
+			case2,
+			cases;
 		if (indexed){
-			var case1 = {};
-			var case2 = {};
-			var cases = {};
+			case1 = {};
+			case2 = {};
+			cases = {};
 		}else{
-			var case1 = [];
-			var case2 = [];
-			var cases = [];
+			case1 = [];
+			case2 = [];
+			cases = [];
 		}
 		case1 = this._getItemsByPrefabViaSchema('weapon_case', 'case', indexed);
 		case2 = this._getItemsByPrefabViaSchema('weapon_case_base', 'case', indexed);
 		
-		for (var attrname in case1) { cases[attrname] = case1[attrname]; }
-		for (var attrname in case2) { cases[attrname] = case2[attrname]; }
+		for (var attrname1 in case1) { if (case1.hasOwnProperty(attrname1)) { cases[attrname1] = case1[attrname1]; }}
+		for (var attrname2 in case2) { if (case2.hasOwnProperty(attrname2)) { cases[attrname2] = case2[attrname2]; }}
 		return cases;
 	
 	}
@@ -611,10 +614,11 @@ class CSGODataParser {
 			if (key !== '0') {
 				var timerStickers = misc.generateTimer();
 				if (indexed){
+					var rarity;
 					if (rawstickers[key].item_rarity == null) {
-						var rarity='default';
+						rarity='default';
 					} else {
-						var rarity=rawstickers[key].item_rarity;
+						rarity=rawstickers[key].item_rarity;
 					}
 					stickers[key] = {
 						'name':self.getLangValue(rawstickers[key].item_name),
@@ -713,10 +717,11 @@ class CSGODataParser {
 		Object.keys(rawrarities).forEach(function(key){
 			var timerRarity = misc.generateTimer();
 			//Hack for melee weapon :s
+			var wepName
 			if (rawrarities[key].loc_key_weapon === 'Rarity_Unusual') {
-				var wepName = '★ ' + self.getLangValue('RI_M'); 
+				wepName = '★ ' + self.getLangValue('RI_M'); 
 			} else {
-				var wepName = self.getLangValue(rawrarities[key].loc_key_weapon);
+				wepName = self.getLangValue(rawrarities[key].loc_key_weapon);
 			}
 			if (indexed){
 				var i = rawrarities[key].value;
