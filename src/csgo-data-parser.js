@@ -413,6 +413,7 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalWeapons + ' weapons [' + misc.resultTimer(timer) +'s]');
 		return weapons;
 	}
+	getWeaponsIndexed(){ return this.getWeapons(true);}
 
 	/**
 	 * Generate collection's data from itemsgame's data.
@@ -470,6 +471,7 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalCollection + ' collections [' + misc.resultTimer(timer) +'s]');
 		return collections;
 	}
+	getCollectionsIndexed(){ return this.getCollections(true);}
 
 	/**
 	 * Generate exteriors.
@@ -495,6 +497,40 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalExteriors + ' exteriors [' + misc.resultTimer(timer) +'s]');
 		return exteriors;
 	}
+
+	/**
+	 * Generate Origins List.
+	 * @return {Array.<Origin>} List of Origin objects. One object represent one origin.
+	 * @public
+	 */
+	getOrigins(indexed) {
+		/*jshint camelcase: false */
+		var self = this;
+		var timer = misc.generateTimer();
+		self.logger.info('');
+		self.logger.info('');
+		self.logger.info('-----------------------------------------');
+		self.logger.info('-------- Origins List Generation --------');
+		self.logger.info('-----------------------------------------');
+		self.logger.info('');
+		var origins;
+
+		(indexed ? origins={} : origins=[]);
+		var obj = this.schemaData.result.originNames;
+		Object.keys(obj).forEach(function(key){
+			var element = obj[key];
+			if (indexed){
+				var i = element.origin;
+				origins[i] = element.name;
+			}else{
+				origins.push(element.name);
+			}
+		});
+		var totalOrigins=Object.keys(origins).length;
+		self.logger.info('Generate ' + totalOrigins + ' origins [' + misc.resultTimer(timer) +'s]');
+		return origins;
+	}
+	getOriginsIndexed(){ return this.getOrigins(true);}
 
 	/**
 	 * Generate Weapon/Stickers skin Case list.
@@ -527,6 +563,7 @@ class CSGODataParser {
 		return cases;
 	
 	}
+	getCasesIndexed(){ return this.getCases(true);}
 
 	/**
 	 * Generate Weapon/Stickers skin Case keys list.
@@ -548,6 +585,7 @@ class CSGODataParser {
 
 		return casekeys;
 	}
+	getCaseKeysIndexed(){ return this.getCaseKeys(true);}
 
 	/**
 	 * Generate Stickers list.
@@ -604,6 +642,7 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalStickers + ' stickers [' + misc.resultTimer(timer) +'s]');
 		return stickers;
 	} 
+	getStickersIndexed(){ return this.getStickers(true);}
 	
 	/**
 	 * Generate MusicKits list.
@@ -649,6 +688,7 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalMusics + ' music kits [' + misc.resultTimer(timer) +'s]');
 		return musics;
 	}
+	getMusicKitsIndexed(){ return this.getMusicKits(true);}
 	
 	/**
 	 * Generate Rarities index.
@@ -700,8 +740,9 @@ class CSGODataParser {
 
 		var totalRarity=Object.keys(rarities).length;
 		self.logger.info('-----------------------------------------');
-		self.logger.info('Generate ' + totalRarity + ' rarity [' + misc.resultTimer(timer) +'s]');
+		self.logger.info('Generate ' + totalRarity + ' rarities [' + misc.resultTimer(timer) +'s]');
 		return rarities;
 	}
+	getRaritiesIndexed(){ return this.getRarities(true);}
 }
 module.exports = CSGODataParser;
