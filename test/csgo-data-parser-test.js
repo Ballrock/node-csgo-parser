@@ -205,6 +205,12 @@ describe('CSGOParser', function(){
 				assert.operator(returnObject.length, '>', 1);
 			});
 		});
+		describe('Public function getOrigins', function(){
+			it('Origins List', function() {
+				var returnObject = csgoDataParser.getOrigins();
+				assert.operator(returnObject.length, '>', 10);
+			});
+		});
 		describe('Public function getCases', function(){
 			it('Cases List', function() {
 				var returnObject = csgoDataParser.getCases();
@@ -229,12 +235,12 @@ describe('CSGOParser', function(){
 				assert.operator(returnObject.length, '>', 10);
 			});
 		});
-		describe('Public function getRaritiesIndex', function(){
+		describe('Public function getRarities', function(){
 			var returnObject = csgoDataParser.getRarities();
-			it('Rarities Index List', function() {
+			it('Rarities List', function() {
 				assert.operator(returnObject.length, '>', 4);
 			});
-			it('Rarities Index Unusual Test', function() {
+			it('Rarities Unusual Test', function() {
 				returnObject.forEach(function(element) {
 					if(element.techName === 'unusual'){
 						assert.equal(element.weaponName.indexOf('★ '), 0);
