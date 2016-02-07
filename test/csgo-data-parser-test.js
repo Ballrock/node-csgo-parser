@@ -192,11 +192,19 @@ describe('CSGOParser', function(){
 				var returnObject = csgoDataParser.getWeapons();
 				assert.operator(returnObject.length, '>', 20);
 			});
+			it('Weapons List Indexed', function() {
+				var returnObject = csgoDataParser.getWeaponsIndexed();
+				assert.operator(Object.keys(returnObject).length, '>', 20);
+			});
 		});
 		describe('Public function getCollections', function(){
 			it('Collections List', function() {
 				var returnObject = csgoDataParser.getCollections();
 				assert.operator(returnObject.length, '>', 10);
+			});
+			it('Collections List Indexed', function() {
+				var returnObject = csgoDataParser.getCollectionsIndexed();
+				assert.operator(Object.keys(returnObject).length, '>', 10);
 			});
 		});
 		describe('Public function getExteriors', function(){
@@ -210,11 +218,19 @@ describe('CSGOParser', function(){
 				var returnObject = csgoDataParser.getOrigins();
 				assert.operator(returnObject.length, '>', 10);
 			});
+			it('Origins List Indexed', function() {
+				var returnObject = csgoDataParser.getOriginsIndexed();
+				assert.operator(Object.keys(returnObject).length, '>', 10);
+			});
 		});
 		describe('Public function getCases', function(){
 			it('Cases List', function() {
 				var returnObject = csgoDataParser.getCases();
 				assert.operator(returnObject.length, '>', 10);
+			});
+			it('Cases List Indexed', function() {
+				var returnObject = csgoDataParser.getCasesIndexed();
+				assert.operator(Object.keys(returnObject).length, '>', 10);
 			});
 		});
 		describe('Public function getCaseKeys', function(){
@@ -222,17 +238,29 @@ describe('CSGOParser', function(){
 				var returnObject = csgoDataParser.getCaseKeys();
 				assert.operator(returnObject.length, '>', 10);
 			});
+			it('Case Keys List Indexed', function() {
+				var returnObject = csgoDataParser.getCaseKeysIndexed();
+				assert.operator(Object.keys(returnObject).length, '>', 10);
+			});
 		});
 		describe('Public function getStickers', function(){
 			it('Stickers List', function() {
 				var returnObject = csgoDataParser.getStickers();
 				assert.operator(returnObject.length, '>', 100);
 			});
+			it('Stickers List Indexed', function() {
+				var returnObject = csgoDataParser.getStickersIndexed();
+				assert.operator(Object.keys(returnObject).length, '>', 100);
+			});
 		});
 		describe('Public function getMusicKits', function(){
 			it('Music Kits List', function() {
 				var returnObject = csgoDataParser.getMusicKits();
 				assert.operator(returnObject.length, '>', 10);
+			});
+			it('Music Kits List Indexed', function() {
+				var returnObject = csgoDataParser.getMusicKitsIndexed();
+				assert.operator(Object.keys(returnObject).length, '>', 10);
 			});
 		});
 		describe('Public function getRarities', function(){
@@ -247,50 +275,6 @@ describe('CSGOParser', function(){
 					}
 				});
 			});
-		});
-		describe('Public function getWeaponsIndexed', function(){
-			it('Weapons List Indexed', function() {
-				var returnObject = csgoDataParser.getWeaponsIndexed();
-				assert.operator(Object.keys(returnObject).length, '>', 20);
-			});
-		});
-		describe('Public function getCollectionsIndexed', function(){
-			it('Collections List Indexed', function() {
-				var returnObject = csgoDataParser.getCollectionsIndexed();
-				assert.operator(Object.keys(returnObject).length, '>', 10);
-			});
-		});
-		describe('Public function getOriginsIndexed', function(){
-			it('Origins List Indexed', function() {
-				var returnObject = csgoDataParser.getOriginsIndexed();
-				assert.operator(Object.keys(returnObject).length, '>', 10);
-			});
-		});
-		describe('Public function getCasesIndexed', function(){
-			it('Cases List Indexed', function() {
-				var returnObject = csgoDataParser.getCasesIndexed();
-				assert.operator(Object.keys(returnObject).length, '>', 10);
-			});
-		});
-		describe('Public function getCaseKeysIndexed', function(){
-			it('Case Keys List Indexed', function() {
-				var returnObject = csgoDataParser.getCaseKeysIndexed();
-				assert.operator(Object.keys(returnObject).length, '>', 10);
-			});
-		});
-		describe('Public function getStickersIndexed', function(){
-			it('Stickers List Indexed', function() {
-				var returnObject = csgoDataParser.getStickersIndexed();
-				assert.operator(Object.keys(returnObject).length, '>', 100);
-			});
-		});
-		describe('Public function getMusicKitsIndexed', function(){
-			it('Music Kits List Indexed', function() {
-				var returnObject = csgoDataParser.getMusicKitsIndexed();
-				assert.operator(Object.keys(returnObject).length, '>', 10);
-			});
-		});
-		describe('Public function getRaritiesIndexed', function(){
 			it('Rarities List Indexed', function() {
 				var returnObject = csgoDataParser.getRaritiesIndexed();
 				assert.operator(Object.keys(returnObject).length, '>', 4);
