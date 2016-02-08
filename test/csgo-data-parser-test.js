@@ -1,7 +1,7 @@
 'use strict';
 /* jshint node: true, mocha:true */
 
-var	parser = require('../lib/csgo-data-parser');
+var	parser = require('../src/csgo-data-parser');
 var assert = require('chai').assert;
 
 var schemaFilePath = 'test/test-data/schema.txt', 
