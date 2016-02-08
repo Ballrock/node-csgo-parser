@@ -18,12 +18,13 @@ var timer = misc.generateTimer();
 var infos={};
 infos.baseWeapons = csgoDataParser.getWeapons();
 infos.exteriors = csgoDataParser.getExteriors();
+infos.origins = csgoDataParser.getOrigins();
 infos.collections = csgoDataParser.getCollections();
 infos.cases = csgoDataParser.getCases();
 infos.casekeys = csgoDataParser.getCaseKeys();
 infos.stickers = csgoDataParser.getStickers();
 infos.musickits = csgoDataParser.getMusicKits();
-infos.raritiesIndex = csgoDataParser.getRaritiesIndex();
+infos.rarities = csgoDataParser.getRarities();
 
 csgoDataParser.getLogger().info('');
 csgoDataParser.getLogger().info('-----------------------------------------');

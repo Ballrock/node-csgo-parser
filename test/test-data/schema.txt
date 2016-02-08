@@ -1,7 +1,7 @@
 "result"
 {
 	"status"	"1"
-	"items_game_url"	"https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.babc064ab31426134b098b7b868bb62170fba295.txt"
+	"items_game_url"	"https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.3b976b28bea6c2d4628f34c785f10770ada961bd.txt"
 	"qualities"
 	{
 		"normal"	"0"
@@ -5140,31 +5140,6 @@
 		}
 		"165"
 		{
-			"name"	"campaign weapons expert"
-			"defindex"	"1312"
-			"item_class"	"collectible_item"
-			"item_type_name"	"#campaign"
-			"item_name"	"#csgo_campaign_weapons"
-			"item_description"	"#csgo_campaign_weapons_desc"
-			"proper_name"	"0"
-			"item_quality"	"4"
-			"image_inventory"	"econ/tools/campaign"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"image_url"	"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png"
-			"image_url_large"	""
-			"attributes"
-			{
-				"0"
-				{
-					"name"	"campaign completion bitfield"
-					"class"	"campaign_completion_bitfield"
-					"value"	"0"
-				}
-			}
-		}
-		"166"
-		{
 			"name"	"Community Case Key 4"
 			"defindex"	"1313"
 			"item_class"	"tool"
@@ -5191,7 +5166,7 @@
 				}
 			}
 		}
-		"167"
+		"166"
 		{
 			"name"	"musickit"
 			"defindex"	"1314"
@@ -5211,7 +5186,7 @@
 				"can_stattrack_swap"	"1"
 			}
 		}
-		"168"
+		"167"
 		{
 			"name"	"Community Season Five Summer 2014"
 			"defindex"	"1315"
@@ -5243,7 +5218,7 @@
 
 			}
 		}
-		"169"
+		"168"
 		{
 			"name"	"Community Season Five Summer 2014 Coin 1"
 			"defindex"	"1316"
@@ -5378,7 +5353,7 @@
 				}
 			}
 		}
-		"170"
+		"169"
 		{
 			"name"	"Community Season Five Summer 2014 Coin 2"
 			"defindex"	"1317"
@@ -5513,7 +5488,7 @@
 				}
 			}
 		}
-		"171"
+		"170"
 		{
 			"name"	"Community Season Five Summer 2014 Coin 3"
 			"defindex"	"1318"
@@ -5648,32 +5623,7 @@
 				}
 			}
 		}
-		"172"
-		{
-			"name"	"campaign vanguard"
-			"defindex"	"1319"
-			"item_class"	"collectible_item"
-			"item_type_name"	"#campaign"
-			"item_name"	"#csgo_campaign_vanguard"
-			"item_description"	"#csgo_campaign_vanguard_desc"
-			"proper_name"	"0"
-			"item_quality"	"4"
-			"image_inventory"	"econ/tools/campaign"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"image_url"	"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png"
-			"image_url_large"	""
-			"attributes"
-			{
-				"0"
-				{
-					"name"	"campaign completion bitfield"
-					"class"	"campaign_completion_bitfield"
-					"value"	"0"
-				}
-			}
-		}
-		"173"
+		"171"
 		{
 			"name"	"campaign magrheb"
 			"defindex"	"1320"
@@ -5698,7 +5648,7 @@
 				}
 			}
 		}
-		"174"
+		"172"
 		{
 			"name"	"campaign eurasia"
 			"defindex"	"1321"
@@ -5723,7 +5673,7 @@
 				}
 			}
 		}
-		"175"
+		"173"
 		{
 			"name"	"Community Case Key 5"
 			"defindex"	"1322"
@@ -5751,7 +5701,7 @@
 				}
 			}
 		}
-		"176"
+		"174"
 		{
 			"name"	"Community Case Key 6"
 			"defindex"	"1323"
@@ -5779,7 +5729,7 @@
 				}
 			}
 		}
-		"177"
+		"175"
 		{
 			"name"	"stattrak_swap_tool"
 			"defindex"	"1324"
@@ -5805,7 +5755,7 @@
 				}
 			}
 		}
-		"178"
+		"176"
 		{
 			"name"	"Community Case Key 7"
 			"defindex"	"1325"
@@ -5833,7 +5783,7 @@
 				}
 			}
 		}
-		"179"
+		"177"
 		{
 			"name"	"Community Season Six 2015"
 			"defindex"	"1326"
@@ -5865,7 +5815,7 @@
 
 			}
 		}
-		"180"
+		"178"
 		{
 			"name"	"Community Season Six 2015 Coin 1"
 			"defindex"	"1327"
@@ -6030,7 +5980,7 @@
 				}
 			}
 		}
-		"181"
+		"179"
 		{
 			"name"	"Community Season Six 2015 Coin 2"
 			"defindex"	"1328"
@@ -6195,7 +6145,7 @@
 				}
 			}
 		}
-		"182"
+		"180"
 		{
 			"name"	"Community Season Six 2015 Coin 3"
 			"defindex"	"1329"
@@ -6360,7 +6310,7 @@
 				}
 			}
 		}
-		"183"
+		"181"
 		{
 			"name"	"Falchion Case Key"
 			"defindex"	"1330"
@@ -6388,7 +6338,7 @@
 				}
 			}
 		}
-		"184"
+		"182"
 		{
 			"name"	"prestige coin 2015"
 			"defindex"	"1331"
@@ -6410,7 +6360,7 @@
 
 			}
 		}
-		"185"
+		"183"
 		{
 			"name"	"prestige coin 2015 level 2"
 			"defindex"	"1332"
@@ -6432,7 +6382,7 @@
 
 			}
 		}
-		"186"
+		"184"
 		{
 			"name"	"Community Case Key 9"
 			"defindex"	"1333"
@@ -6460,7 +6410,7 @@
 				}
 			}
 		}
-		"187"
+		"185"
 		{
 			"name"	"crate_community_10 Key"
 			"defindex"	"1334"
@@ -6488,7 +6438,7 @@
 				}
 			}
 		}
-		"188"
+		"186"
 		{
 			"name"	"prestige coin 2016"
 			"defindex"	"1339"
@@ -6510,7 +6460,7 @@
 
 			}
 		}
-		"189"
+		"187"
 		{
 			"name"	"prestige coin 2016 level 2"
 			"defindex"	"1340"
@@ -6532,7 +6482,7 @@
 
 			}
 		}
-		"190"
+		"188"
 		{
 			"name"	"prestige coin 2016 level 3"
 			"defindex"	"1341"
@@ -6554,7 +6504,7 @@
 
 			}
 		}
-		"191"
+		"189"
 		{
 			"name"	"prestige coin 2016 level 4"
 			"defindex"	"1342"
@@ -6576,7 +6526,7 @@
 
 			}
 		}
-		"192"
+		"190"
 		{
 			"name"	"prestige coin 2016 level 5"
 			"defindex"	"1343"
@@ -6598,7 +6548,7 @@
 
 			}
 		}
-		"193"
+		"191"
 		{
 			"name"	"prestige coin 2016 level 6"
 			"defindex"	"1344"
@@ -6620,7 +6570,7 @@
 
 			}
 		}
-		"194"
+		"192"
 		{
 			"name"	"crate_valve_1"
 			"defindex"	"4001"
@@ -6658,7 +6608,7 @@
 				}
 			}
 		}
-		"195"
+		"193"
 		{
 			"name"	"crate_esports_2013"
 			"defindex"	"4002"
@@ -6697,7 +6647,7 @@
 				}
 			}
 		}
-		"196"
+		"194"
 		{
 			"name"	"crate_operation_ii"
 			"defindex"	"4003"
@@ -6735,7 +6685,7 @@
 				}
 			}
 		}
-		"197"
+		"195"
 		{
 			"name"	"crate_valve_2"
 			"defindex"	"4004"
@@ -6773,7 +6723,7 @@
 				}
 			}
 		}
-		"198"
+		"196"
 		{
 			"name"	"crate_esports_2013_winter"
 			"defindex"	"4005"
@@ -6812,7 +6762,7 @@
 				}
 			}
 		}
-		"199"
+		"197"
 		{
 			"name"	"crate_dhw13_promo"
 			"defindex"	"4006"
@@ -6854,7 +6804,7 @@
 				}
 			}
 		}
-		"200"
+		"198"
 		{
 			"name"	"crate_sticker_pack01"
 			"defindex"	"4007"
@@ -6892,7 +6842,7 @@
 				}
 			}
 		}
-		"201"
+		"199"
 		{
 			"name"	"crate_community_1"
 			"defindex"	"4009"
@@ -6930,7 +6880,7 @@
 				}
 			}
 		}
-		"202"
+		"200"
 		{
 			"name"	"crate_valve_3"
 			"defindex"	"4010"
@@ -6968,7 +6918,7 @@
 				}
 			}
 		}
-		"203"
+		"201"
 		{
 			"name"	"crate_community_2"
 			"defindex"	"4011"
@@ -7006,7 +6956,7 @@
 				}
 			}
 		}
-		"204"
+		"202"
 		{
 			"name"	"crate_sticker_pack02"
 			"defindex"	"4012"
@@ -7044,7 +6994,7 @@
 				}
 			}
 		}
-		"205"
+		"203"
 		{
 			"name"	"crate_ems14_promo"
 			"defindex"	"4013"
@@ -7086,7 +7036,7 @@
 				}
 			}
 		}
-		"206"
+		"204"
 		{
 			"name"	"crate_sticker_pack_kat2014_01"
 			"defindex"	"4014"
@@ -7129,7 +7079,7 @@
 				}
 			}
 		}
-		"207"
+		"205"
 		{
 			"name"	"crate_sticker_pack_kat2014_02"
 			"defindex"	"4015"
@@ -7172,7 +7122,7 @@
 				}
 			}
 		}
-		"208"
+		"206"
 		{
 			"name"	"crate_sticker_pack_community01"
 			"defindex"	"4016"
@@ -7211,7 +7161,7 @@
 				}
 			}
 		}
-		"209"
+		"207"
 		{
 			"name"	"crate_community_3"
 			"defindex"	"4017"
@@ -7249,7 +7199,7 @@
 				}
 			}
 		}
-		"210"
+		"208"
 		{
 			"name"	"crate_community_4"
 			"defindex"	"4018"
@@ -7287,7 +7237,7 @@
 				}
 			}
 		}
-		"211"
+		"209"
 		{
 			"name"	"crate_esports_2014_summer"
 			"defindex"	"4019"
@@ -7326,7 +7276,7 @@
 				}
 			}
 		}
-		"212"
+		"210"
 		{
 			"name"	"crate_sticker_pack_cologne2014_01"
 			"defindex"	"4020"
@@ -7369,7 +7319,7 @@
 				}
 			}
 		}
-		"213"
+		"211"
 		{
 			"name"	"crate_sticker_pack_cologne2014_02"
 			"defindex"	"4021"
@@ -7412,7 +7362,7 @@
 				}
 			}
 		}
-		"214"
+		"212"
 		{
 			"name"	"crate_esl14_promo_de_dust2"
 			"defindex"	"4022"
@@ -7454,7 +7404,7 @@
 				}
 			}
 		}
-		"215"
+		"213"
 		{
 			"name"	"crate_esl14_promo_de_inferno"
 			"defindex"	"4023"
@@ -7496,7 +7446,7 @@
 				}
 			}
 		}
-		"216"
+		"214"
 		{
 			"name"	"crate_esl14_promo_de_mirage"
 			"defindex"	"4024"
@@ -7538,7 +7488,7 @@
 				}
 			}
 		}
-		"217"
+		"215"
 		{
 			"name"	"crate_esl14_promo_de_nuke"
 			"defindex"	"4025"
@@ -7580,7 +7530,7 @@
 				}
 			}
 		}
-		"218"
+		"216"
 		{
 			"name"	"crate_esl14_promo_de_cache"
 			"defindex"	"4026"
@@ -7622,7 +7572,7 @@
 				}
 			}
 		}
-		"219"
+		"217"
 		{
 			"name"	"crate_esl14_promo_de_cbble"
 			"defindex"	"4027"
@@ -7664,7 +7614,7 @@
 				}
 			}
 		}
-		"220"
+		"218"
 		{
 			"name"	"crate_esl14_promo_de_overpass"
 			"defindex"	"4028"
@@ -7706,7 +7656,7 @@
 				}
 			}
 		}
-		"221"
+		"219"
 		{
 			"name"	"crate_operation_vanguard"
 			"defindex"	"4029"
@@ -7745,7 +7695,7 @@
 				}
 			}
 		}
-		"222"
+		"220"
 		{
 			"name"	"crate_sticker_pack_dhw2014_01"
 			"defindex"	"4030"
@@ -7788,7 +7738,7 @@
 				}
 			}
 		}
-		"223"
+		"221"
 		{
 			"name"	"crate_dhw14_promo_de_dust2"
 			"defindex"	"4031"
@@ -7830,7 +7780,7 @@
 				}
 			}
 		}
-		"224"
+		"222"
 		{
 			"name"	"crate_dhw14_promo_de_inferno"
 			"defindex"	"4032"
@@ -7872,7 +7822,7 @@
 				}
 			}
 		}
-		"225"
+		"223"
 		{
 			"name"	"crate_dhw14_promo_de_mirage"
 			"defindex"	"4033"
@@ -7914,7 +7864,7 @@
 				}
 			}
 		}
-		"226"
+		"224"
 		{
 			"name"	"crate_dhw14_promo_de_nuke"
 			"defindex"	"4034"
@@ -7956,7 +7906,7 @@
 				}
 			}
 		}
-		"227"
+		"225"
 		{
 			"name"	"crate_dhw14_promo_de_cache"
 			"defindex"	"4035"
@@ -7998,7 +7948,7 @@
 				}
 			}
 		}
-		"228"
+		"226"
 		{
 			"name"	"crate_dhw14_promo_de_cbble"
 			"defindex"	"4036"
@@ -8040,7 +7990,7 @@
 				}
 			}
 		}
-		"229"
+		"227"
 		{
 			"name"	"crate_dhw14_promo_de_overpass"
 			"defindex"	"4037"
@@ -8082,7 +8032,7 @@
 				}
 			}
 		}
-		"230"
+		"228"
 		{
 			"name"	"crate_sticker_pack_dhw2014_fnatic"
 			"defindex"	"4038"
@@ -8119,7 +8069,7 @@
 				}
 			}
 		}
-		"231"
+		"229"
 		{
 			"name"	"crate_sticker_pack_dhw2014_cloud9"
 			"defindex"	"4039"
@@ -8156,7 +8106,7 @@
 				}
 			}
 		}
-		"232"
+		"230"
 		{
 			"name"	"crate_sticker_pack_dhw2014_ninjasinpyjamas"
 			"defindex"	"4041"
@@ -8193,7 +8143,7 @@
 				}
 			}
 		}
-		"233"
+		"231"
 		{
 			"name"	"crate_sticker_pack_dhw2014_virtuspro"
 			"defindex"	"4042"
@@ -8230,7 +8180,7 @@
 				}
 			}
 		}
-		"234"
+		"232"
 		{
 			"name"	"crate_sticker_pack_dhw2014_navi"
 			"defindex"	"4043"
@@ -8267,7 +8217,7 @@
 				}
 			}
 		}
-		"235"
+		"233"
 		{
 			"name"	"crate_sticker_pack_dhw2014_dignitas"
 			"defindex"	"4045"
@@ -8304,7 +8254,7 @@
 				}
 			}
 		}
-		"236"
+		"234"
 		{
 			"name"	"crate_sticker_pack_dhw2014_bravadogaming"
 			"defindex"	"4046"
@@ -8341,7 +8291,7 @@
 				}
 			}
 		}
-		"237"
+		"235"
 		{
 			"name"	"crate_sticker_pack_dhw2014_escgaming"
 			"defindex"	"4047"
@@ -8378,7 +8328,7 @@
 				}
 			}
 		}
-		"238"
+		"236"
 		{
 			"name"	"crate_sticker_pack_dhw2014_hellraisers"
 			"defindex"	"4048"
@@ -8415,7 +8365,7 @@
 				}
 			}
 		}
-		"239"
+		"237"
 		{
 			"name"	"crate_sticker_pack_dhw2014_myxmg"
 			"defindex"	"4049"
@@ -8452,7 +8402,7 @@
 				}
 			}
 		}
-		"240"
+		"238"
 		{
 			"name"	"crate_sticker_pack_dhw2014_ibuypower"
 			"defindex"	"4050"
@@ -8489,7 +8439,7 @@
 				}
 			}
 		}
-		"241"
+		"239"
 		{
 			"name"	"crate_sticker_pack_dhw2014_teamldlc"
 			"defindex"	"4051"
@@ -8526,7 +8476,7 @@
 				}
 			}
 		}
-		"242"
+		"240"
 		{
 			"name"	"crate_sticker_pack_dhw2014_pentasports"
 			"defindex"	"4052"
@@ -8563,7 +8513,7 @@
 				}
 			}
 		}
-		"243"
+		"241"
 		{
 			"name"	"crate_sticker_pack_dhw2014_planetkeydynamics"
 			"defindex"	"4053"
@@ -8600,7 +8550,7 @@
 				}
 			}
 		}
-		"244"
+		"242"
 		{
 			"name"	"crate_sticker_pack_dhw2014_dhw"
 			"defindex"	"4054"
@@ -8637,7 +8587,7 @@
 				}
 			}
 		}
-		"245"
+		"243"
 		{
 			"name"	"crate_sticker_pack_dhw2014_3dmax"
 			"defindex"	"4055"
@@ -8674,7 +8624,7 @@
 				}
 			}
 		}
-		"246"
+		"244"
 		{
 			"name"	"crate_sticker_pack_dhw2014_copenhagenwolves"
 			"defindex"	"4056"
@@ -8711,7 +8661,7 @@
 				}
 			}
 		}
-		"247"
+		"245"
 		{
 			"name"	"crate_sticker_pack_dhw2014_datteam"
 			"defindex"	"4057"
@@ -8748,7 +8698,7 @@
 				}
 			}
 		}
-		"248"
+		"246"
 		{
 			"name"	"crate_sticker_pack_dhw2014_londonconspiracy"
 			"defindex"	"4058"
@@ -8785,7 +8735,7 @@
 				}
 			}
 		}
-		"249"
+		"247"
 		{
 			"name"	"crate_sticker_pack_dhw2014_mousesports"
 			"defindex"	"4059"
@@ -8822,7 +8772,7 @@
 				}
 			}
 		}
-		"250"
+		"248"
 		{
 			"name"	"crate_sticker_pack_dhw2014_flipsid3"
 			"defindex"	"4060"
@@ -8859,7 +8809,7 @@
 				}
 			}
 		}
-		"251"
+		"249"
 		{
 			"name"	"crate_community_6"
 			"defindex"	"4061"
@@ -8898,7 +8848,7 @@
 				}
 			}
 		}
-		"252"
+		"250"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_3dmax"
 			"defindex"	"4062"
@@ -8935,7 +8885,7 @@
 				}
 			}
 		}
-		"253"
+		"251"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_cloud9"
 			"defindex"	"4063"
@@ -8972,7 +8922,7 @@
 				}
 			}
 		}
-		"254"
+		"252"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_counterlogic"
 			"defindex"	"4064"
@@ -9009,7 +8959,7 @@
 				}
 			}
 		}
-		"255"
+		"253"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_flipsid3"
 			"defindex"	"4065"
@@ -9046,7 +8996,7 @@
 				}
 			}
 		}
-		"256"
+		"254"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_fnatic"
 			"defindex"	"4066"
@@ -9083,7 +9033,7 @@
 				}
 			}
 		}
-		"257"
+		"255"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_hellraisers"
 			"defindex"	"4067"
@@ -9120,7 +9070,7 @@
 				}
 			}
 		}
-		"258"
+		"256"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_keyd"
 			"defindex"	"4068"
@@ -9157,7 +9107,7 @@
 				}
 			}
 		}
-		"259"
+		"257"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_lgb"
 			"defindex"	"4069"
@@ -9194,7 +9144,7 @@
 				}
 			}
 		}
-		"260"
+		"258"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_navi"
 			"defindex"	"4070"
@@ -9231,7 +9181,7 @@
 				}
 			}
 		}
-		"261"
+		"259"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_ninjasinpyjamas"
 			"defindex"	"4071"
@@ -9268,7 +9218,7 @@
 				}
 			}
 		}
-		"262"
+		"260"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_pentasports"
 			"defindex"	"4072"
@@ -9305,7 +9255,7 @@
 				}
 			}
 		}
-		"263"
+		"261"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_teamenvyus"
 			"defindex"	"4073"
@@ -9342,7 +9292,7 @@
 				}
 			}
 		}
-		"264"
+		"262"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_teamsolomid"
 			"defindex"	"4074"
@@ -9379,7 +9329,7 @@
 				}
 			}
 		}
-		"265"
+		"263"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_titan"
 			"defindex"	"4075"
@@ -9416,7 +9366,7 @@
 				}
 			}
 		}
-		"266"
+		"264"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_virtuspro"
 			"defindex"	"4076"
@@ -9453,7 +9403,7 @@
 				}
 			}
 		}
-		"267"
+		"265"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_voxeminor"
 			"defindex"	"4077"
@@ -9490,7 +9440,7 @@
 				}
 			}
 		}
-		"268"
+		"266"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_esl_a"
 			"defindex"	"4078"
@@ -9527,7 +9477,7 @@
 				}
 			}
 		}
-		"269"
+		"267"
 		{
 			"name"	"crate_eslkatowice2015_promo_de_dust2"
 			"defindex"	"4079"
@@ -9569,7 +9519,7 @@
 				}
 			}
 		}
-		"270"
+		"268"
 		{
 			"name"	"crate_eslkatowice2015_promo_de_inferno"
 			"defindex"	"4080"
@@ -9611,7 +9561,7 @@
 				}
 			}
 		}
-		"271"
+		"269"
 		{
 			"name"	"crate_eslkatowice2015_promo_de_mirage"
 			"defindex"	"4081"
@@ -9653,7 +9603,7 @@
 				}
 			}
 		}
-		"272"
+		"270"
 		{
 			"name"	"crate_eslkatowice2015_promo_de_nuke"
 			"defindex"	"4082"
@@ -9695,7 +9645,7 @@
 				}
 			}
 		}
-		"273"
+		"271"
 		{
 			"name"	"crate_eslkatowice2015_promo_de_cache"
 			"defindex"	"4083"
@@ -9737,7 +9687,7 @@
 				}
 			}
 		}
-		"274"
+		"272"
 		{
 			"name"	"crate_eslkatowice2015_promo_de_cbble"
 			"defindex"	"4084"
@@ -9779,7 +9729,7 @@
 				}
 			}
 		}
-		"275"
+		"273"
 		{
 			"name"	"crate_eslkatowice2015_promo_de_overpass"
 			"defindex"	"4085"
@@ -9821,7 +9771,7 @@
 				}
 			}
 		}
-		"276"
+		"274"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_01"
 			"defindex"	"4086"
@@ -9864,7 +9814,7 @@
 				}
 			}
 		}
-		"277"
+		"275"
 		{
 			"name"	"crate_sticker_pack_eslkatowice2015_02"
 			"defindex"	"4087"
@@ -9907,7 +9857,7 @@
 				}
 			}
 		}
-		"278"
+		"276"
 		{
 			"name"	"crate_stattrak_swap_tool"
 			"defindex"	"4088"
@@ -9935,7 +9885,7 @@
 				}
 			}
 		}
-		"279"
+		"277"
 		{
 			"name"	"crate_community_7"
 			"defindex"	"4089"
@@ -9974,7 +9924,7 @@
 				}
 			}
 		}
-		"280"
+		"278"
 		{
 			"name"	"crate_sticker_pack_enfu_capsule"
 			"defindex"	"4090"
@@ -10011,7 +9961,7 @@
 				}
 			}
 		}
-		"281"
+		"279"
 		{
 			"name"	"crate_community_8"
 			"defindex"	"4091"
@@ -10050,7 +10000,7 @@
 				}
 			}
 		}
-		"282"
+		"280"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_fnatic"
 			"defindex"	"4092"
@@ -10087,7 +10037,7 @@
 				}
 			}
 		}
-		"283"
+		"281"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_virtuspro"
 			"defindex"	"4093"
@@ -10124,7 +10074,7 @@
 				}
 			}
 		}
-		"284"
+		"282"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_mousesports"
 			"defindex"	"4094"
@@ -10161,7 +10111,7 @@
 				}
 			}
 		}
-		"285"
+		"283"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_navi"
 			"defindex"	"4095"
@@ -10198,7 +10148,7 @@
 				}
 			}
 		}
-		"286"
+		"284"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_renegades"
 			"defindex"	"4096"
@@ -10235,7 +10185,7 @@
 				}
 			}
 		}
-		"287"
+		"285"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_kinguin"
 			"defindex"	"4097"
@@ -10272,7 +10222,7 @@
 				}
 			}
 		}
-		"288"
+		"286"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_ebettle"
 			"defindex"	"4098"
@@ -10309,7 +10259,7 @@
 				}
 			}
 		}
-		"289"
+		"287"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_cloud9"
 			"defindex"	"4099"
@@ -10346,7 +10296,7 @@
 				}
 			}
 		}
-		"290"
+		"288"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_ninjasinpyjamas"
 			"defindex"	"4100"
@@ -10383,7 +10333,7 @@
 				}
 			}
 		}
-		"291"
+		"289"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_envyus"
 			"defindex"	"4101"
@@ -10420,7 +10370,7 @@
 				}
 			}
 		}
-		"292"
+		"290"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_luminositygaming"
 			"defindex"	"4102"
@@ -10457,7 +10407,7 @@
 				}
 			}
 		}
-		"293"
+		"291"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_solomid"
 			"defindex"	"4103"
@@ -10494,7 +10444,7 @@
 				}
 			}
 		}
-		"294"
+		"292"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_teamimmunity"
 			"defindex"	"4104"
@@ -10531,7 +10481,7 @@
 				}
 			}
 		}
-		"295"
+		"293"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_flipside"
 			"defindex"	"4105"
@@ -10568,7 +10518,7 @@
 				}
 			}
 		}
-		"296"
+		"294"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_titan"
 			"defindex"	"4106"
@@ -10605,7 +10555,7 @@
 				}
 			}
 		}
-		"297"
+		"295"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_clg"
 			"defindex"	"4107"
@@ -10642,7 +10592,7 @@
 				}
 			}
 		}
-		"298"
+		"296"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_esl"
 			"defindex"	"4108"
@@ -10679,7 +10629,7 @@
 				}
 			}
 		}
-		"299"
+		"297"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_legends"
 			"defindex"	"4109"
@@ -10722,7 +10672,7 @@
 				}
 			}
 		}
-		"300"
+		"298"
 		{
 			"name"	"crate_sticker_pack_eslcologne2015_challengers"
 			"defindex"	"4110"
@@ -10765,7 +10715,7 @@
 				}
 			}
 		}
-		"301"
+		"299"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_group_1"
 			"defindex"	"4111"
@@ -10808,7 +10758,7 @@
 				}
 			}
 		}
-		"302"
+		"300"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_group_2"
 			"defindex"	"4112"
@@ -10851,7 +10801,7 @@
 				}
 			}
 		}
-		"303"
+		"301"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_group_3"
 			"defindex"	"4113"
@@ -10894,7 +10844,7 @@
 				}
 			}
 		}
-		"304"
+		"302"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_group_4"
 			"defindex"	"4114"
@@ -10937,7 +10887,7 @@
 				}
 			}
 		}
-		"305"
+		"303"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_fnatic"
 			"defindex"	"4115"
@@ -10986,7 +10936,7 @@
 				}
 			}
 		}
-		"306"
+		"304"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_luminositygaming"
 			"defindex"	"4116"
@@ -11035,7 +10985,7 @@
 				}
 			}
 		}
-		"307"
+		"305"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_navi"
 			"defindex"	"4117"
@@ -11084,7 +11034,7 @@
 				}
 			}
 		}
-		"308"
+		"306"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_ninjasinpyjamas"
 			"defindex"	"4118"
@@ -11133,7 +11083,7 @@
 				}
 			}
 		}
-		"309"
+		"307"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_envyus"
 			"defindex"	"4119"
@@ -11182,7 +11132,7 @@
 				}
 			}
 		}
-		"310"
+		"308"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_titan"
 			"defindex"	"4120"
@@ -11231,7 +11181,7 @@
 				}
 			}
 		}
-		"311"
+		"309"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_solomid"
 			"defindex"	"4121"
@@ -11280,7 +11230,7 @@
 				}
 			}
 		}
-		"312"
+		"310"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_virtuspro"
 			"defindex"	"4122"
@@ -11329,7 +11279,7 @@
 				}
 			}
 		}
-		"313"
+		"311"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_mousesports"
 			"defindex"	"4123"
@@ -11378,7 +11328,7 @@
 				}
 			}
 		}
-		"314"
+		"312"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_renegades"
 			"defindex"	"4124"
@@ -11427,7 +11377,7 @@
 				}
 			}
 		}
-		"315"
+		"313"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_teamimmunity"
 			"defindex"	"4125"
@@ -11476,7 +11426,7 @@
 				}
 			}
 		}
-		"316"
+		"314"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_ebettle"
 			"defindex"	"4126"
@@ -11525,7 +11475,7 @@
 				}
 			}
 		}
-		"317"
+		"315"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_kinguin"
 			"defindex"	"4127"
@@ -11574,7 +11524,7 @@
 				}
 			}
 		}
-		"318"
+		"316"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_flipside"
 			"defindex"	"4128"
@@ -11623,7 +11573,7 @@
 				}
 			}
 		}
-		"319"
+		"317"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_clg"
 			"defindex"	"4129"
@@ -11672,7 +11622,7 @@
 				}
 			}
 		}
-		"320"
+		"318"
 		{
 			"name"	"crate_signature_pack_eslcologne2015_cloud9"
 			"defindex"	"4130"
@@ -11721,7 +11671,7 @@
 				}
 			}
 		}
-		"321"
+		"319"
 		{
 			"name"	"crate_eslcologne2015_promo_de_dust2"
 			"defindex"	"4131"
@@ -11763,7 +11713,7 @@
 				}
 			}
 		}
-		"322"
+		"320"
 		{
 			"name"	"crate_eslcologne2015_promo_de_mirage"
 			"defindex"	"4132"
@@ -11805,7 +11755,7 @@
 				}
 			}
 		}
-		"323"
+		"321"
 		{
 			"name"	"crate_eslcologne2015_promo_de_inferno"
 			"defindex"	"4133"
@@ -11847,7 +11797,7 @@
 				}
 			}
 		}
-		"324"
+		"322"
 		{
 			"name"	"crate_eslcologne2015_promo_de_cbble"
 			"defindex"	"4134"
@@ -11889,7 +11839,7 @@
 				}
 			}
 		}
-		"325"
+		"323"
 		{
 			"name"	"crate_eslcologne2015_promo_de_overpass"
 			"defindex"	"4135"
@@ -11931,7 +11881,7 @@
 				}
 			}
 		}
-		"326"
+		"324"
 		{
 			"name"	"crate_eslcologne2015_promo_de_cache"
 			"defindex"	"4136"
@@ -11973,7 +11923,7 @@
 				}
 			}
 		}
-		"327"
+		"325"
 		{
 			"name"	"crate_eslcologne2015_promo_de_train"
 			"defindex"	"4137"
@@ -12015,7 +11965,7 @@
 				}
 			}
 		}
-		"328"
+		"326"
 		{
 			"name"	"crate_community_9"
 			"defindex"	"4138"
@@ -12054,7 +12004,7 @@
 				}
 			}
 		}
-		"329"
+		"327"
 		{
 			"name"	"crate_sticker_pack_cluj2015_nip"
 			"defindex"	"4139"
@@ -12091,7 +12041,7 @@
 				}
 			}
 		}
-		"330"
+		"328"
 		{
 			"name"	"crate_sticker_pack_cluj2015_dig"
 			"defindex"	"4140"
@@ -12128,7 +12078,7 @@
 				}
 			}
 		}
-		"331"
+		"329"
 		{
 			"name"	"crate_sticker_pack_cluj2015_clg"
 			"defindex"	"4141"
@@ -12165,7 +12115,7 @@
 				}
 			}
 		}
-		"332"
+		"330"
 		{
 			"name"	"crate_sticker_pack_cluj2015_vex"
 			"defindex"	"4142"
@@ -12202,7 +12152,7 @@
 				}
 			}
 		}
-		"333"
+		"331"
 		{
 			"name"	"crate_sticker_pack_cluj2015_flip"
 			"defindex"	"4143"
@@ -12239,7 +12189,7 @@
 				}
 			}
 		}
-		"334"
+		"332"
 		{
 			"name"	"crate_sticker_pack_cluj2015_liq"
 			"defindex"	"4144"
@@ -12276,7 +12226,7 @@
 				}
 			}
 		}
-		"335"
+		"333"
 		{
 			"name"	"crate_sticker_pack_cluj2015_mss"
 			"defindex"	"4145"
@@ -12313,7 +12263,7 @@
 				}
 			}
 		}
-		"336"
+		"334"
 		{
 			"name"	"crate_sticker_pack_cluj2015_navi"
 			"defindex"	"4146"
@@ -12350,7 +12300,7 @@
 				}
 			}
 		}
-		"337"
+		"335"
 		{
 			"name"	"crate_sticker_pack_cluj2015_vp"
 			"defindex"	"4147"
@@ -12387,7 +12337,7 @@
 				}
 			}
 		}
-		"338"
+		"336"
 		{
 			"name"	"crate_sticker_pack_cluj2015_c9"
 			"defindex"	"4148"
@@ -12424,7 +12374,7 @@
 				}
 			}
 		}
-		"339"
+		"337"
 		{
 			"name"	"crate_sticker_pack_cluj2015_g2"
 			"defindex"	"4149"
@@ -12461,7 +12411,7 @@
 				}
 			}
 		}
-		"340"
+		"338"
 		{
 			"name"	"crate_sticker_pack_cluj2015_tit"
 			"defindex"	"4150"
@@ -12498,7 +12448,7 @@
 				}
 			}
 		}
-		"341"
+		"339"
 		{
 			"name"	"crate_sticker_pack_cluj2015_tsolo"
 			"defindex"	"4151"
@@ -12535,7 +12485,7 @@
 				}
 			}
 		}
-		"342"
+		"340"
 		{
 			"name"	"crate_sticker_pack_cluj2015_nv"
 			"defindex"	"4152"
@@ -12572,7 +12522,7 @@
 				}
 			}
 		}
-		"343"
+		"341"
 		{
 			"name"	"crate_sticker_pack_cluj2015_fntc"
 			"defindex"	"4153"
@@ -12609,7 +12559,7 @@
 				}
 			}
 		}
-		"344"
+		"342"
 		{
 			"name"	"crate_sticker_pack_cluj2015_lumi"
 			"defindex"	"4154"
@@ -12646,7 +12596,7 @@
 				}
 			}
 		}
-		"345"
+		"343"
 		{
 			"name"	"crate_sticker_pack_cluj2015_dhc"
 			"defindex"	"4155"
@@ -12683,7 +12633,7 @@
 				}
 			}
 		}
-		"346"
+		"344"
 		{
 			"name"	"crate_sticker_pack_cluj2015_legends"
 			"defindex"	"4156"
@@ -12726,7 +12676,7 @@
 				}
 			}
 		}
-		"347"
+		"345"
 		{
 			"name"	"crate_sticker_pack_cluj2015_challengers"
 			"defindex"	"4157"
@@ -12769,7 +12719,7 @@
 				}
 			}
 		}
-		"348"
+		"346"
 		{
 			"name"	"crate_signature_pack_cluj2015_group_1"
 			"defindex"	"4158"
@@ -12812,7 +12762,7 @@
 				}
 			}
 		}
-		"349"
+		"347"
 		{
 			"name"	"crate_signature_pack_cluj2015_group_2"
 			"defindex"	"4159"
@@ -12855,7 +12805,7 @@
 				}
 			}
 		}
-		"350"
+		"348"
 		{
 			"name"	"crate_signature_pack_cluj2015_nip"
 			"defindex"	"4160"
@@ -12904,7 +12854,7 @@
 				}
 			}
 		}
-		"351"
+		"349"
 		{
 			"name"	"crate_signature_pack_cluj2015_dig"
 			"defindex"	"4161"
@@ -12953,7 +12903,7 @@
 				}
 			}
 		}
-		"352"
+		"350"
 		{
 			"name"	"crate_signature_pack_cluj2015_clg"
 			"defindex"	"4162"
@@ -13002,7 +12952,7 @@
 				}
 			}
 		}
-		"353"
+		"351"
 		{
 			"name"	"crate_signature_pack_cluj2015_vex"
 			"defindex"	"4163"
@@ -13051,7 +13001,7 @@
 				}
 			}
 		}
-		"354"
+		"352"
 		{
 			"name"	"crate_signature_pack_cluj2015_flip"
 			"defindex"	"4164"
@@ -13100,7 +13050,7 @@
 				}
 			}
 		}
-		"355"
+		"353"
 		{
 			"name"	"crate_signature_pack_cluj2015_liq"
 			"defindex"	"4165"
@@ -13149,7 +13099,7 @@
 				}
 			}
 		}
-		"356"
+		"354"
 		{
 			"name"	"crate_signature_pack_cluj2015_mss"
 			"defindex"	"4166"
@@ -13198,7 +13148,7 @@
 				}
 			}
 		}
-		"357"
+		"355"
 		{
 			"name"	"crate_signature_pack_cluj2015_navi"
 			"defindex"	"4167"
@@ -13247,7 +13197,7 @@
 				}
 			}
 		}
-		"358"
+		"356"
 		{
 			"name"	"crate_signature_pack_cluj2015_vp"
 			"defindex"	"4168"
@@ -13296,7 +13246,7 @@
 				}
 			}
 		}
-		"359"
+		"357"
 		{
 			"name"	"crate_signature_pack_cluj2015_c9"
 			"defindex"	"4169"
@@ -13345,7 +13295,7 @@
 				}
 			}
 		}
-		"360"
+		"358"
 		{
 			"name"	"crate_signature_pack_cluj2015_g2"
 			"defindex"	"4170"
@@ -13394,7 +13344,7 @@
 				}
 			}
 		}
-		"361"
+		"359"
 		{
 			"name"	"crate_signature_pack_cluj2015_tit"
 			"defindex"	"4171"
@@ -13443,7 +13393,7 @@
 				}
 			}
 		}
-		"362"
+		"360"
 		{
 			"name"	"crate_signature_pack_cluj2015_tsolo"
 			"defindex"	"4172"
@@ -13492,7 +13442,7 @@
 				}
 			}
 		}
-		"363"
+		"361"
 		{
 			"name"	"crate_signature_pack_cluj2015_nv"
 			"defindex"	"4173"
@@ -13541,7 +13491,7 @@
 				}
 			}
 		}
-		"364"
+		"362"
 		{
 			"name"	"crate_signature_pack_cluj2015_fntc"
 			"defindex"	"4174"
@@ -13590,7 +13540,7 @@
 				}
 			}
 		}
-		"365"
+		"363"
 		{
 			"name"	"crate_signature_pack_cluj2015_lumi"
 			"defindex"	"4175"
@@ -13639,7 +13589,7 @@
 				}
 			}
 		}
-		"366"
+		"364"
 		{
 			"name"	"crate_cluj2015_promo_de_dust2"
 			"defindex"	"4176"
@@ -13681,7 +13631,7 @@
 				}
 			}
 		}
-		"367"
+		"365"
 		{
 			"name"	"crate_cluj2015_promo_de_mirage"
 			"defindex"	"4177"
@@ -13723,7 +13673,7 @@
 				}
 			}
 		}
-		"368"
+		"366"
 		{
 			"name"	"crate_cluj2015_promo_de_inferno"
 			"defindex"	"4178"
@@ -13765,7 +13715,7 @@
 				}
 			}
 		}
-		"369"
+		"367"
 		{
 			"name"	"crate_cluj2015_promo_de_cbble"
 			"defindex"	"4179"
@@ -13807,7 +13757,7 @@
 				}
 			}
 		}
-		"370"
+		"368"
 		{
 			"name"	"crate_cluj2015_promo_de_overpass"
 			"defindex"	"4180"
@@ -13849,7 +13799,7 @@
 				}
 			}
 		}
-		"371"
+		"369"
 		{
 			"name"	"crate_cluj2015_promo_de_cache"
 			"defindex"	"4181"
@@ -13891,7 +13841,7 @@
 				}
 			}
 		}
-		"372"
+		"370"
 		{
 			"name"	"crate_cluj2015_promo_de_train"
 			"defindex"	"4182"
@@ -13933,7 +13883,7 @@
 				}
 			}
 		}
-		"373"
+		"371"
 		{
 			"name"	"crate_sticker_pack_pinups_capsule"
 			"defindex"	"4183"
@@ -13970,7 +13920,7 @@
 				}
 			}
 		}
-		"374"
+		"372"
 		{
 			"name"	"crate_sticker_pack_slid3_capsule"
 			"defindex"	"4184"
@@ -14007,7 +13957,7 @@
 				}
 			}
 		}
-		"375"
+		"373"
 		{
 			"name"	"crate_sticker_pack_team_roles_capsule"
 			"defindex"	"4185"
@@ -14044,7 +13994,7 @@
 				}
 			}
 		}
-		"376"
+		"374"
 		{
 			"name"	"crate_community_10"
 			"defindex"	"4186"
@@ -14083,7 +14033,7 @@
 				}
 			}
 		}
-		"377"
+		"375"
 		{
 			"name"	"Collectible Pin - Dust II"
 			"defindex"	"6001"
@@ -14105,7 +14055,7 @@
 
 			}
 		}
-		"378"
+		"376"
 		{
 			"name"	"Collectible Pin - Guardian Elite"
 			"defindex"	"6002"
@@ -14127,7 +14077,7 @@
 
 			}
 		}
-		"379"
+		"377"
 		{
 			"name"	"Collectible Pin - Mirage"
 			"defindex"	"6003"
@@ -14149,7 +14099,7 @@
 
 			}
 		}
-		"380"
+		"378"
 		{
 			"name"	"Collectible Pin - Inferno"
 			"defindex"	"6004"
@@ -14171,7 +14121,7 @@
 
 			}
 		}
-		"381"
+		"379"
 		{
 			"name"	"Collectible Pin - Italy"
 			"defindex"	"6005"
@@ -14193,7 +14143,7 @@
 
 			}
 		}
-		"382"
+		"380"
 		{
 			"name"	"Collectible Pin - Victory"
 			"defindex"	"6006"
@@ -14215,7 +14165,7 @@
 
 			}
 		}
-		"383"
+		"381"
 		{
 			"name"	"Collectible Pin - Militia"
 			"defindex"	"6007"
@@ -14237,7 +14187,7 @@
 
 			}
 		}
-		"384"
+		"382"
 		{
 			"name"	"Collectible Pin - Nuke"
 			"defindex"	"6008"
@@ -14259,7 +14209,7 @@
 
 			}
 		}
-		"385"
+		"383"
 		{
 			"name"	"Collectible Pin - Train"
 			"defindex"	"6009"
@@ -14281,7 +14231,7 @@
 
 			}
 		}
-		"386"
+		"384"
 		{
 			"name"	"Collectible Pin - Guardian"
 			"defindex"	"6010"
@@ -14303,7 +14253,7 @@
 
 			}
 		}
-		"387"
+		"385"
 		{
 			"name"	"Collectible Pin - Tactics"
 			"defindex"	"6011"
@@ -14325,7 +14275,7 @@
 
 			}
 		}
-		"388"
+		"386"
 		{
 			"name"	"coupon - bossyburger"
 			"defindex"	"20000"
@@ -14362,7 +14312,7 @@
 				}
 			}
 		}
-		"389"
+		"387"
 		{
 			"name"	"coupon - catcall"
 			"defindex"	"20001"
@@ -14399,7 +14349,7 @@
 				}
 			}
 		}
-		"390"
+		"388"
 		{
 			"name"	"coupon - chickenstrike"
 			"defindex"	"20002"
@@ -14436,7 +14386,7 @@
 				}
 			}
 		}
-		"391"
+		"389"
 		{
 			"name"	"coupon - ctbanana"
 			"defindex"	"20003"
@@ -14473,7 +14423,7 @@
 				}
 			}
 		}
-		"392"
+		"390"
 		{
 			"name"	"coupon - dontworryimpro"
 			"defindex"	"20004"
@@ -14510,7 +14460,7 @@
 				}
 			}
 		}
-		"393"
+		"391"
 		{
 			"name"	"coupon - fightlikeagirl"
 			"defindex"	"20005"
@@ -14547,7 +14497,7 @@
 				}
 			}
 		}
-		"394"
+		"392"
 		{
 			"name"	"coupon - handmadeflash"
 			"defindex"	"20006"
@@ -14584,7 +14534,7 @@
 				}
 			}
 		}
-		"395"
+		"393"
 		{
 			"name"	"coupon - kawaiikiller"
 			"defindex"	"20007"
@@ -14621,7 +14571,7 @@
 				}
 			}
 		}
-		"396"
+		"394"
 		{
 			"name"	"coupon - neluthebear"
 			"defindex"	"20008"
@@ -14658,7 +14608,7 @@
 				}
 			}
 		}
-		"397"
+		"395"
 		{
 			"name"	"coupon - oneshotonekill"
 			"defindex"	"20009"
@@ -14695,7 +14645,7 @@
 				}
 			}
 		}
-		"398"
+		"396"
 		{
 			"name"	"coupon - shootingstar"
 			"defindex"	"20010"
@@ -14732,7 +14682,7 @@
 				}
 			}
 		}
-		"399"
+		"397"
 		{
 			"name"	"coupon - warpenguin"
 			"defindex"	"20012"
@@ -14769,7 +14719,7 @@
 				}
 			}
 		}
-		"400"
+		"398"
 		{
 			"name"	"coupon - windywalking"
 			"defindex"	"20013"
@@ -14806,7 +14756,7 @@
 				}
 			}
 		}
-		"401"
+		"399"
 		{
 			"name"	"coupon - blitzkrieg"
 			"defindex"	"20014"
@@ -14843,7 +14793,7 @@
 				}
 			}
 		}
-		"402"
+		"400"
 		{
 			"name"	"coupon - pigeonmaster"
 			"defindex"	"20015"
@@ -14880,7 +14830,7 @@
 				}
 			}
 		}
-		"403"
+		"401"
 		{
 			"name"	"coupon - terrorized"
 			"defindex"	"20016"
@@ -14917,7 +14867,7 @@
 				}
 			}
 		}
-		"404"
+		"402"
 		{
 			"name"	"coupon - tilldeathdouspart"
 			"defindex"	"20017"
@@ -14954,7 +14904,7 @@
 				}
 			}
 		}
-		"405"
+		"403"
 		{
 			"name"	"coupon - stayfrosty"
 			"defindex"	"20018"
@@ -14991,7 +14941,7 @@
 				}
 			}
 		}
-		"406"
+		"404"
 		{
 			"name"	"coupon - toncat"
 			"defindex"	"20019"
@@ -15028,7 +14978,7 @@
 				}
 			}
 		}
-		"407"
+		"405"
 		{
 			"name"	"coupon - danielsadowski_01"
 			"defindex"	"20020"
@@ -15065,7 +15015,7 @@
 				}
 			}
 		}
-		"408"
+		"406"
 		{
 			"name"	"coupon - noisia_01"
 			"defindex"	"20021"
@@ -15102,7 +15052,7 @@
 				}
 			}
 		}
-		"409"
+		"407"
 		{
 			"name"	"coupon - robertallaire_01"
 			"defindex"	"20022"
@@ -15139,7 +15089,7 @@
 				}
 			}
 		}
-		"410"
+		"408"
 		{
 			"name"	"coupon - seanmurray_01"
 			"defindex"	"20023"
@@ -15176,7 +15126,7 @@
 				}
 			}
 		}
-		"411"
+		"409"
 		{
 			"name"	"coupon - feedme_01"
 			"defindex"	"20024"
@@ -15213,7 +15163,7 @@
 				}
 			}
 		}
-		"412"
+		"410"
 		{
 			"name"	"coupon - dren_01"
 			"defindex"	"20025"
@@ -15250,7 +15200,7 @@
 				}
 			}
 		}
-		"413"
+		"411"
 		{
 			"name"	"coupon - austinwintory_01"
 			"defindex"	"20026"
@@ -15287,7 +15237,7 @@
 				}
 			}
 		}
-		"414"
+		"412"
 		{
 			"name"	"coupon - sasha_01"
 			"defindex"	"20027"
@@ -15324,7 +15274,7 @@
 				}
 			}
 		}
-		"415"
+		"413"
 		{
 			"name"	"coupon - skog_01"
 			"defindex"	"20028"
@@ -15361,7 +15311,7 @@
 				}
 			}
 		}
-		"416"
+		"414"
 		{
 			"name"	"coupon - doomed"
 			"defindex"	"20029"
@@ -15398,7 +15348,7 @@
 				}
 			}
 		}
-		"417"
+		"415"
 		{
 			"name"	"coupon - queenofpain"
 			"defindex"	"20030"
@@ -15435,7 +15385,7 @@
 				}
 			}
 		}
-		"418"
+		"416"
 		{
 			"name"	"coupon - trickorthreat"
 			"defindex"	"20031"
@@ -15472,7 +15422,7 @@
 				}
 			}
 		}
-		"419"
+		"417"
 		{
 			"name"	"coupon - trickortreat"
 			"defindex"	"20032"
@@ -15509,7 +15459,7 @@
 				}
 			}
 		}
-		"420"
+		"418"
 		{
 			"name"	"coupon - witch"
 			"defindex"	"20033"
@@ -15546,7 +15496,7 @@
 				}
 			}
 		}
-		"421"
+		"419"
 		{
 			"name"	"coupon - zombielover"
 			"defindex"	"20034"
@@ -15583,7 +15533,7 @@
 				}
 			}
 		}
-		"422"
+		"420"
 		{
 			"name"	"coupon - blood_broiler"
 			"defindex"	"20035"
@@ -15620,7 +15570,7 @@
 				}
 			}
 		}
-		"423"
+		"421"
 		{
 			"name"	"coupon - dinked"
 			"defindex"	"20036"
@@ -15657,7 +15607,7 @@
 				}
 			}
 		}
-		"424"
+		"422"
 		{
 			"name"	"coupon - drugwarveteran"
 			"defindex"	"20037"
@@ -15694,7 +15644,7 @@
 				}
 			}
 		}
-		"425"
+		"423"
 		{
 			"name"	"coupon - hohoho"
 			"defindex"	"20038"
@@ -15731,7 +15681,7 @@
 				}
 			}
 		}
-		"426"
+		"424"
 		{
 			"name"	"coupon - massivepear"
 			"defindex"	"20039"
@@ -15768,7 +15718,7 @@
 				}
 			}
 		}
-		"427"
+		"425"
 		{
 			"name"	"coupon - mylittlefriend"
 			"defindex"	"20040"
@@ -15805,7 +15755,7 @@
 				}
 			}
 		}
-		"428"
+		"426"
 		{
 			"name"	"coupon - pandamonium"
 			"defindex"	"20041"
@@ -15842,7 +15792,7 @@
 				}
 			}
 		}
-		"429"
+		"427"
 		{
 			"name"	"coupon - pieceofcake"
 			"defindex"	"20042"
@@ -15879,7 +15829,7 @@
 				}
 			}
 		}
-		"430"
+		"428"
 		{
 			"name"	"coupon - saschicken"
 			"defindex"	"20043"
@@ -15916,7 +15866,7 @@
 				}
 			}
 		}
-		"431"
+		"429"
 		{
 			"name"	"coupon - thuglife"
 			"defindex"	"20044"
@@ -15953,7 +15903,7 @@
 				}
 			}
 		}
-		"432"
+		"430"
 		{
 			"name"	"coupon - trekt"
 			"defindex"	"20045"
@@ -15990,7 +15940,7 @@
 				}
 			}
 		}
-		"433"
+		"431"
 		{
 			"name"	"coupon - warowl"
 			"defindex"	"20046"
@@ -16027,7 +15977,7 @@
 				}
 			}
 		}
-		"434"
+		"432"
 		{
 			"name"	"coupon - workforfood"
 			"defindex"	"20047"
@@ -16064,7 +16014,7 @@
 				}
 			}
 		}
-		"435"
+		"433"
 		{
 			"name"	"coupon - phoenix_foil"
 			"defindex"	"20048"
@@ -16101,7 +16051,7 @@
 				}
 			}
 		}
-		"436"
+		"434"
 		{
 			"name"	"coupon - bombsquad_foil"
 			"defindex"	"20049"
@@ -16138,7 +16088,7 @@
 				}
 			}
 		}
-		"437"
+		"435"
 		{
 			"name"	"coupon - midnightriders_01"
 			"defindex"	"20050"
@@ -16175,7 +16125,7 @@
 				}
 			}
 		}
-		"438"
+		"436"
 		{
 			"name"	"coupon - danielsadowski_02"
 			"defindex"	"20051"
@@ -16212,7 +16162,7 @@
 				}
 			}
 		}
-		"439"
+		"437"
 		{
 			"name"	"coupon - hotlinemiami_01"
 			"defindex"	"20052"
@@ -16249,7 +16199,7 @@
 				}
 			}
 		}
-		"440"
+		"438"
 		{
 			"name"	"coupon - mattlange_01"
 			"defindex"	"20053"
@@ -16286,7 +16236,7 @@
 				}
 			}
 		}
-		"441"
+		"439"
 		{
 			"name"	"coupon - mateomessina_01"
 			"defindex"	"20054"
@@ -16323,7 +16273,7 @@
 				}
 			}
 		}
-		"442"
+		"440"
 		{
 			"name"	"coupon - damjanmravunac_01"
 			"defindex"	"20055"
@@ -16360,7 +16310,7 @@
 				}
 			}
 		}
-		"443"
+		"441"
 		{
 			"name"	"coupon - flickshot"
 			"defindex"	"20056"
@@ -16397,7 +16347,7 @@
 				}
 			}
 		}
-		"444"
+		"442"
 		{
 			"name"	"coupon - headshot_guarantee"
 			"defindex"	"20057"
@@ -16434,7 +16384,7 @@
 				}
 			}
 		}
-		"445"
+		"443"
 		{
 			"name"	"coupon - eco_rush"
 			"defindex"	"20058"
@@ -16471,7 +16421,7 @@
 				}
 			}
 		}
-		"446"
+		"444"
 		{
 			"name"	"coupon - just_trolling"
 			"defindex"	"20059"
@@ -16508,7 +16458,7 @@
 				}
 			}
 		}
-		"447"
+		"445"
 		{
 			"name"	"coupon - firestarter_holo"
 			"defindex"	"20061"
@@ -16545,7 +16495,7 @@
 				}
 			}
 		}
-		"448"
+		"446"
 		{
 			"name"	"coupon - lucky_cat_foil"
 			"defindex"	"20062"
@@ -16582,7 +16532,7 @@
 				}
 			}
 		}
-		"449"
+		"447"
 		{
 			"name"	"coupon - robot_head"
 			"defindex"	"20063"
@@ -16619,7 +16569,7 @@
 				}
 			}
 		}
-		"450"
+		"448"
 		{
 			"name"	"coupon - witchcraft"
 			"defindex"	"20064"
@@ -16656,7 +16606,7 @@
 				}
 			}
 		}
-		"451"
+		"449"
 		{
 			"name"	"coupon - wanna_fight"
 			"defindex"	"20065"
@@ -16693,7 +16643,7 @@
 				}
 			}
 		}
-		"452"
+		"450"
 		{
 			"name"	"coupon - hostage_rescue"
 			"defindex"	"20066"
@@ -16730,7 +16680,7 @@
 				}
 			}
 		}
-		"453"
+		"451"
 		{
 			"name"	"coupon - hamster_hawk"
 			"defindex"	"20067"
@@ -16767,7 +16717,7 @@
 				}
 			}
 		}
-		"454"
+		"452"
 		{
 			"name"	"coupon - headless_chicken"
 			"defindex"	"20068"
@@ -16804,7 +16754,7 @@
 				}
 			}
 		}
-		"455"
+		"453"
 		{
 			"name"	"coupon - proxy_01"
 			"defindex"	"20069"
@@ -16841,7 +16791,7 @@
 				}
 			}
 		}
-		"456"
+		"454"
 		{
 			"name"	"coupon - kitheory_01"
 			"defindex"	"20070"
@@ -16878,7 +16828,7 @@
 				}
 			}
 		}
-		"457"
+		"455"
 		{
 			"name"	"coupon - troelsfolmann_01"
 			"defindex"	"20071"
@@ -16915,7 +16865,7 @@
 				}
 			}
 		}
-		"458"
+		"456"
 		{
 			"name"	"coupon - kellybailey_01"
 			"defindex"	"20072"
@@ -16952,7 +16902,7 @@
 				}
 			}
 		}
-		"459"
+		"457"
 		{
 			"name"	"coupon - skog_02"
 			"defindex"	"20073"
@@ -16989,7 +16939,7 @@
 				}
 			}
 		}
-		"460"
+		"458"
 		{
 			"name"	"coupon - enfu_sticker_capsule"
 			"defindex"	"20074"
@@ -17026,7 +16976,7 @@
 				}
 			}
 		}
-		"461"
+		"459"
 		{
 			"name"	"coupon - awp_country"
 			"defindex"	"20075"
@@ -17063,7 +17013,7 @@
 				}
 			}
 		}
-		"462"
+		"460"
 		{
 			"name"	"coupon - chi_bomb"
 			"defindex"	"20076"
@@ -17100,7 +17050,7 @@
 				}
 			}
 		}
-		"463"
+		"461"
 		{
 			"name"	"coupon - fox"
 			"defindex"	"20077"
@@ -17137,7 +17087,7 @@
 				}
 			}
 		}
-		"464"
+		"462"
 		{
 			"name"	"coupon - knifeclub"
 			"defindex"	"20078"
@@ -17174,7 +17124,7 @@
 				}
 			}
 		}
-		"465"
+		"463"
 		{
 			"name"	"coupon - cs_on_the_mind"
 			"defindex"	"20079"
@@ -17211,7 +17161,7 @@
 				}
 			}
 		}
-		"466"
+		"464"
 		{
 			"name"	"coupon - ninja_defuse"
 			"defindex"	"20080"
@@ -17248,7 +17198,7 @@
 				}
 			}
 		}
-		"467"
+		"465"
 		{
 			"name"	"coupon - pros_dont_fake"
 			"defindex"	"20081"
@@ -17285,7 +17235,7 @@
 				}
 			}
 		}
-		"468"
+		"466"
 		{
 			"name"	"coupon - kawaiikiller_t"
 			"defindex"	"20082"
@@ -17322,7 +17272,7 @@
 				}
 			}
 		}
-		"469"
+		"467"
 		{
 			"name"	"coupon - baackstabber"
 			"defindex"	"20083"
@@ -17359,7 +17309,7 @@
 				}
 			}
 		}
-		"470"
+		"468"
 		{
 			"name"	"coupon - delicious_tears"
 			"defindex"	"20084"
@@ -17396,7 +17346,7 @@
 				}
 			}
 		}
-		"471"
+		"469"
 		{
 			"name"	"coupon - danielsadowski_03"
 			"defindex"	"20085"
@@ -17433,7 +17383,7 @@
 				}
 			}
 		}
-		"472"
+		"470"
 		{
 			"name"	"coupon - awolnation_01"
 			"defindex"	"20086"
@@ -17470,7 +17420,7 @@
 				}
 			}
 		}
-		"473"
+		"471"
 		{
 			"name"	"coupon - mordfustang_01"
 			"defindex"	"20087"
@@ -17507,7 +17457,7 @@
 				}
 			}
 		}
-		"474"
+		"472"
 		{
 			"name"	"coupon - michaelbross_01"
 			"defindex"	"20088"
@@ -17544,7 +17494,7 @@
 				}
 			}
 		}
-		"475"
+		"473"
 		{
 			"name"	"coupon - ianhultquist_01"
 			"defindex"	"20089"
@@ -17581,7 +17531,7 @@
 				}
 			}
 		}
-		"476"
+		"474"
 		{
 			"name"	"coupon - newbeatfund_01"
 			"defindex"	"20090"
@@ -17618,7 +17568,7 @@
 				}
 			}
 		}
-		"477"
+		"475"
 		{
 			"name"	"coupon - beartooth_01"
 			"defindex"	"20091"
@@ -17655,7 +17605,7 @@
 				}
 			}
 		}
-		"478"
+		"476"
 		{
 			"name"	"coupon - lenniemoore_01"
 			"defindex"	"20092"
@@ -17692,7 +17642,7 @@
 				}
 			}
 		}
-		"479"
+		"477"
 		{
 			"name"	"coupon - darude_01"
 			"defindex"	"20093"
@@ -17729,7 +17679,7 @@
 				}
 			}
 		}
-		"480"
+		"478"
 		{
 			"name"	"coupon - proxy_01_stattrak"
 			"defindex"	"20094"
@@ -17766,7 +17716,7 @@
 				}
 			}
 		}
-		"481"
+		"479"
 		{
 			"name"	"coupon - kitheory_01_stattrak"
 			"defindex"	"20095"
@@ -17803,7 +17753,7 @@
 				}
 			}
 		}
-		"482"
+		"480"
 		{
 			"name"	"coupon - troelsfolmann_01_stattrak"
 			"defindex"	"20096"
@@ -17840,7 +17790,7 @@
 				}
 			}
 		}
-		"483"
+		"481"
 		{
 			"name"	"coupon - kellybailey_01_stattrak"
 			"defindex"	"20097"
@@ -17877,7 +17827,7 @@
 				}
 			}
 		}
-		"484"
+		"482"
 		{
 			"name"	"coupon - skog_02_stattrak"
 			"defindex"	"20098"
@@ -17914,7 +17864,7 @@
 				}
 			}
 		}
-		"485"
+		"483"
 		{
 			"name"	"coupon - danielsadowski_03_stattrak"
 			"defindex"	"20099"
@@ -17951,7 +17901,7 @@
 				}
 			}
 		}
-		"486"
+		"484"
 		{
 			"name"	"coupon - awolnation_01_stattrak"
 			"defindex"	"20100"
@@ -17988,7 +17938,7 @@
 				}
 			}
 		}
-		"487"
+		"485"
 		{
 			"name"	"coupon - mordfustang_01_stattrak"
 			"defindex"	"20101"
@@ -18025,7 +17975,7 @@
 				}
 			}
 		}
-		"488"
+		"486"
 		{
 			"name"	"coupon - michaelbross_01_stattrak"
 			"defindex"	"20102"
@@ -18062,7 +18012,7 @@
 				}
 			}
 		}
-		"489"
+		"487"
 		{
 			"name"	"coupon - ianhultquist_01_stattrak"
 			"defindex"	"20103"
@@ -18099,7 +18049,7 @@
 				}
 			}
 		}
-		"490"
+		"488"
 		{
 			"name"	"coupon - newbeatfund_01_stattrak"
 			"defindex"	"20104"
@@ -18136,7 +18086,7 @@
 				}
 			}
 		}
-		"491"
+		"489"
 		{
 			"name"	"coupon - beartooth_01_stattrak"
 			"defindex"	"20105"
@@ -18173,7 +18123,7 @@
 				}
 			}
 		}
-		"492"
+		"490"
 		{
 			"name"	"coupon - lenniemoore_01_stattrak"
 			"defindex"	"20106"
@@ -18210,7 +18160,7 @@
 				}
 			}
 		}
-		"493"
+		"491"
 		{
 			"name"	"coupon - darude_01_stattrak"
 			"defindex"	"20107"
@@ -18247,7 +18197,7 @@
 				}
 			}
 		}
-		"494"
+		"492"
 		{
 			"name"	"coupon - danielsadowski_01_stattrak"
 			"defindex"	"20108"
@@ -18284,7 +18234,7 @@
 				}
 			}
 		}
-		"495"
+		"493"
 		{
 			"name"	"coupon - noisia_01_stattrak"
 			"defindex"	"20109"
@@ -18321,7 +18271,7 @@
 				}
 			}
 		}
-		"496"
+		"494"
 		{
 			"name"	"coupon - robertallaire_01_stattrak"
 			"defindex"	"20110"
@@ -18358,7 +18308,7 @@
 				}
 			}
 		}
-		"497"
+		"495"
 		{
 			"name"	"coupon - seanmurray_01_stattrak"
 			"defindex"	"20111"
@@ -18395,7 +18345,7 @@
 				}
 			}
 		}
-		"498"
+		"496"
 		{
 			"name"	"coupon - feedme_01_stattrak"
 			"defindex"	"20112"
@@ -18432,7 +18382,7 @@
 				}
 			}
 		}
-		"499"
+		"497"
 		{
 			"name"	"coupon - dren_01_stattrak"
 			"defindex"	"20113"
@@ -18469,7 +18419,7 @@
 				}
 			}
 		}
-		"500"
+		"498"
 		{
 			"name"	"coupon - austinwintory_01_stattrak"
 			"defindex"	"20114"
@@ -18506,7 +18456,7 @@
 				}
 			}
 		}
-		"501"
+		"499"
 		{
 			"name"	"coupon - sasha_01_stattrak"
 			"defindex"	"20115"
@@ -18543,7 +18493,7 @@
 				}
 			}
 		}
-		"502"
+		"500"
 		{
 			"name"	"coupon - skog_01_stattrak"
 			"defindex"	"20116"
@@ -18580,7 +18530,7 @@
 				}
 			}
 		}
-		"503"
+		"501"
 		{
 			"name"	"coupon - midnightriders_01_stattrak"
 			"defindex"	"20117"
@@ -18617,7 +18567,7 @@
 				}
 			}
 		}
-		"504"
+		"502"
 		{
 			"name"	"coupon - danielsadowski_02_stattrak"
 			"defindex"	"20118"
@@ -18654,7 +18604,7 @@
 				}
 			}
 		}
-		"505"
+		"503"
 		{
 			"name"	"coupon - hotlinemiami_01_stattrak"
 			"defindex"	"20119"
@@ -18691,7 +18641,7 @@
 				}
 			}
 		}
-		"506"
+		"504"
 		{
 			"name"	"coupon - mattlange_01_stattrak"
 			"defindex"	"20120"
@@ -18728,7 +18678,7 @@
 				}
 			}
 		}
-		"507"
+		"505"
 		{
 			"name"	"coupon - mateomessina_01_stattrak"
 			"defindex"	"20121"
@@ -18765,7 +18715,7 @@
 				}
 			}
 		}
-		"508"
+		"506"
 		{
 			"name"	"coupon - damjanmravunac_01_stattrak"
 			"defindex"	"20122"
@@ -18802,7 +18752,7 @@
 				}
 			}
 		}
-		"509"
+		"507"
 		{
 			"name"	"coupon - pinups_sticker_capsule"
 			"defindex"	"20123"
@@ -18839,7 +18789,7 @@
 				}
 			}
 		}
-		"510"
+		"508"
 		{
 			"name"	"coupon - slid3_sticker_capsule"
 			"defindex"	"20124"
@@ -18876,7 +18826,7 @@
 				}
 			}
 		}
-		"511"
+		"509"
 		{
 			"name"	"coupon - team_roles_sticker_capsule"
 			"defindex"	"20125"
