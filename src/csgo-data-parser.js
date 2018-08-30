@@ -2,7 +2,8 @@
 /* jshint node: true */
 
 //Correct vdf for little endian handle ?
-var vdf = require('vdf'),
+var simplevdf = require('simple-vdf'),
+	vdf = require('vdf'),
 	fs = require('fs'),
 	winston = require('winston'),
 	misc = require('./miscHelper'),
@@ -97,11 +98,11 @@ class CSGODataParser {
 
 		// ---- ITEMGAME FILE ---
 		var itemsFile = fs.readFileSync(this.itemsFilePath, 'utf8');
-		this.itemsData = vdf.parse(itemsFile);
+		this.itemsData = simplevdf.parse(itemsFile);
 
 		// ---- SCHEMA FILE --- 
 		var schemaFile = fs.readFileSync(this.schemaFilePath, 'utf8');
-		this.schemaData = vdf.parse(schemaFile);
+		this.schemaData = simplevdf.parse(schemaFile);
 	}
 
 	/**
