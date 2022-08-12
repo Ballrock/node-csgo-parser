@@ -11,6 +11,7 @@
     "url": "git://github.com/Ballrock/node-csgo-parser.git"
   },
   "dependencies": {
+    "simple-vdf": "^1.1.1",
     "vdf": "^0.0.2",
     "winston": "^2.1.1"
   },

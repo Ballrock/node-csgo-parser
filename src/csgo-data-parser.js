@@ -2,7 +2,7 @@
 /* jshint node: true */
 
 //Correct vdf for little endian handle ?
-var vdf = require('vdf'),
+var simplevdf = require('simple-vdf'),
 	fs = require('fs'),
 	winston = require('winston'),
 	misc = require('./miscHelper'),
@@ -87,21 +87,31 @@ class CSGODataParser {
 	 */
 	_generateObjectDataFromFiles() {
 		// ---- LANG FILE ---
-		var langFile = fs.readFileSync(this.langFilePath, 'utf16le');
-		this.langData = vdf.parse(langFile);
-		//Hack for tought Little Indian Character in object name after VDF.parse
-		//Little Indian Character here "-->\"lang\""
-		var littleEndianName = '\uFEFF\"lang\"';
-		this.langData.lang = this.langData[littleEndianName];
-		delete this.langData[littleEndianName];
+		var langFile = fs.readFileSync(this.langFilePath, 'utf8');
+		try {
+			this.langData = JSON.parse(langFile);
+		} catch (e)
+		{
+			this.langData = simplevdf.parse(langFile);
+		}
 
 		// ---- ITEMGAME FILE ---
 		var itemsFile = fs.readFileSync(this.itemsFilePath, 'utf8');
-		this.itemsData = vdf.parse(itemsFile);
+		try {
+			this.itemsData = JSON.parse(itemsFile);
+		} catch (e)
+		{
+			this.itemsData = simplevdf.parse(itemsFile);
+		}
 
-		// ---- SCHEMA FILE --- 
+		// ---- SCHEMA FILE ---
 		var schemaFile = fs.readFileSync(this.schemaFilePath, 'utf8');
-		this.schemaData = vdf.parse(schemaFile);
+		try {
+			this.schemaData = JSON.parse(schemaFile);
+		} catch (e)
+		{
+			this.schemaData = simplevdf.parse(schemaFile);
+		}
 	}
 
 	/**
@@ -441,6 +451,8 @@ class CSGODataParser {
 			var timerCollections = misc.generateTimer();
 			Object.keys(valuecollection.items).forEach(function(keyitem){
 				var values = regexItem.exec(keyitem);
+				if (values === null)
+					return
 				var skinInfo = self._getPaintNameAndDefIndexFromTechnicalName(values[1]);
 				if (indexed){
 					var i=skinInfo[1];
