@@ -426,6 +426,49 @@ class CSGODataParser {
 	getWeaponsIndexed(){ return this.getWeapons(true);}
 
 	/**
+	 * Generate bases Weapons data from schema's data.
+	 * @return {Map.<Weapon>} Map of Objects. One object represent one Weapon. Where key is the weapon's fullName.
+	 * @public
+	 */
+	getWeaponsMap() {
+		var self = this;
+		var timer = misc.generateTimer();
+		self.logger.info('');
+		self.logger.info('');
+		self.logger.info('-----------------------------------------');
+		self.logger.info('-------- Weapons Map Generation --------');
+		self.logger.info('-----------------------------------------');
+		self.logger.info('');
+
+		const skins = {}
+		var items = this.schemaData.result.items;
+		Object.keys(items).forEach(function(key){
+			var element = items[key];
+			if (element.name.indexOf('weapon_') > -1) {
+				var timerSkins = misc.generateTimer();
+				const weapon = {
+					type: self.getLangValue(element.item_type_name),
+					weaponName: self.getLangValue(element.item_name)
+				}
+
+				if (weapon.techName !== 'weapon_knife'){
+					const skinsList = self._getSkinsByWeapon(element.name, element.item_type_name, false);
+					for (const skin of skinsList)
+						skins[skin.fullName] = {...skin, ...weapon};
+				}
+
+				self.logger.info('Generate ' + (weapon.weaponName) + ' skins list [' + misc.resultTimer(timerSkins) +'s]');
+			}
+		})
+
+
+		const totalWeapons=Object.keys(skins).length;
+		self.logger.info('-----------------------------------------');
+		self.logger.info('Generate ' + totalWeapons + ' skins [' + misc.resultTimer(timer) +'s]');
+		return skins;
+	}
+
+	/**
 	 * Generate collection's data from itemsgame's data.
 	 * @return {Array.<Collection>} List of Collections. One object represent one Collection.
 	 * @public
@@ -659,6 +702,42 @@ class CSGODataParser {
 		return stickers;
 	} 
 	getStickersIndexed(){ return this.getStickers(true);}
+	getStickersMap() {
+		/*jshint eqeqeq: false, eqnull:true, camelcase: false */
+		var self = this;
+		var timer = misc.generateTimer();
+		self.logger.info('');
+		self.logger.info('');
+		self.logger.info('-----------------------------------------');
+		self.logger.info('------- Stickers List Generation --------');
+		self.logger.info('-----------------------------------------');
+		self.logger.info('');
+		var stickers = {};
+		var rawstickers = this.itemsData.items_game.sticker_kits;
+		Object.keys(rawstickers).forEach(function(key){
+			//Remove the default Sticker by remove 0 key
+			if (key !== '0') {
+				var timerStickers = misc.generateTimer();
+				var sticker=new Sticker();
+				sticker.name=self.getLangValue(rawstickers[key].item_name);
+				sticker.techName=rawstickers[key].name;
+				sticker.defIndex=key;
+				if (rawstickers[key].item_rarity == null) {
+					sticker.rarity='default';
+				} else {
+					sticker.rarity=rawstickers[key].item_rarity;
+				}
+
+				stickers[sticker.name] = sticker
+				self.logger.info('Fetch ' + ( sticker.name )+ ' sticker [' + misc.resultTimer(timerStickers) +'s]');
+			}
+		});
+
+		var totalStickers=Object.keys(stickers).length;
+		self.logger.info('-----------------------------------------');
+		self.logger.info('Generate ' + totalStickers + ' stickers [' + misc.resultTimer(timer) +'s]');
+		return stickers;
+	}
 	
 	/**
 	 * Generate MusicKits list.

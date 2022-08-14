@@ -16,15 +16,15 @@ var csgoDataParser = new parser(schemaFilePath, langFilePath, itemsFilePath, 'de
 var timer = misc.generateTimer();
 
 var infos={};
-infos.baseWeapons = csgoDataParser.getWeapons();
-infos.exteriors = csgoDataParser.getExteriors();
+infos.stickers = csgoDataParser.getStickersMap();
 infos.origins = csgoDataParser.getOrigins();
 infos.collections = csgoDataParser.getCollections();
 infos.cases = csgoDataParser.getCases();
 infos.casekeys = csgoDataParser.getCaseKeys();
-infos.stickers = csgoDataParser.getStickers();
 infos.musickits = csgoDataParser.getMusicKits();
+infos.exteriors = csgoDataParser.getExteriors();
 infos.rarities = csgoDataParser.getRarities();
+infos.baseWeapons = csgoDataParser.getWeaponsMap();
 
 csgoDataParser.getLogger().info('');
 csgoDataParser.getLogger().info('-----------------------------------------');
