@@ -39,9 +39,9 @@ var csgoDataParser = new parser(schemaFilePath, langFilePath, itemsFilePath, 'de
 
 Must pass schema file (like *schema.txt*), language file (like *csgo_english.txt*) and item file (like *item_data.txt*) at VDF format
 
-- **Schema file** can be find in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchema_v2)
-- **Language file** can be find in game data files (*steam-data*/csgo/resource/csgo_*language*.txt)
-- **Items File** can be find both in game data files () and in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchemaURL_v2) (Note : You need do get the items_game_url information)
+- **Schema file** can be find in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchema_v2) or as a JSON on api.steampowered.com using your web API key (https://api.steampowered.com/IEconItems_730/GetSchema/v2/?key=<API_KEY>&language=en)
+- **Language file** can be find in game data files (*steam-data*/csgo/resource/csgo_*language*.txt) or on Github [GameTracking-CSGO](https://github.com/SteamDatabase/GameTracking-CSGO/blob/master/csgo/resource/csgo_english.txt)
+- **Items File** can be find both in game data files () and in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchemaURL_v2) (Note : You need do get the items_game_url information) or safely on Github [GameTracking-CSGO](https://github.com/SteamDatabase/GameTracking-CSGO/blob/master/csgo/scripts/items/items_game.txt)
 
 ### Example
 
