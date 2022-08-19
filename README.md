@@ -55,6 +55,7 @@ A sample script is at `example.js`.
     * [.isDatasInitialized()](#CSGODataParser+isDatasInitialized) ⇒ <code>boolean</code>
     * [.isLangInitialized()](#CSGODataParser+isLangInitialized) ⇒ <code>boolean</code>
     * [.getLangValue(keyLang)](#CSGODataParser+getLangValue) ⇒ <code>String</code>
+    * [.getSkinsMap()](#CSGODataParser+getSkinsMap) ⇒ <code>{[key: string]: Weapon}</code>
     * [.getWeapons()](#CSGODataParser+getWeapons) ⇒ <code>Array.&lt;Weapon&gt;</code>
     * [.getCollections()](#CSGODataParser+getCollections) ⇒ <code>Array.&lt;Collection&gt;</code>
     * [.getExteriors()](#CSGODataParser+getExteriors) ⇒ <code>Array.&lt;String&gt;</code>
@@ -108,6 +109,14 @@ Get the lang value from valve key i18n values.
 | --- | --- | --- |
 | keyLang | <code>String</code> | valve key i18n values (like #PaintKit_aa_fade_Tag) |
 
+<a name="CSGODataParser+getSkinsMap"></a>
+### csgoDataParser.getSkinsMap() ⇒ <code>{[key: string]: Weapon}</code>
+Generate a key-value map of all weapon skins (including rifles, knives, gloves and hand wraps).
+
+**Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
+**Returns**: <code>{[key: string]: Weapon}</code> - key-value map, where key is the skin's `fullName`
+             (such as `"Desert Eagle | Blaze"`) and the value is the `Weapon` object.  
+**Access:** public
 <a name="CSGODataParser+getWeapons"></a>
 ### csgoDataParser.getWeapons() ⇒ <code>Array.&lt;Weapon&gt;</code>
 Generate bases Weapons data from schema's data.
