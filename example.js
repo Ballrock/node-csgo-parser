@@ -24,7 +24,8 @@ infos.casekeys = csgoDataParser.getCaseKeys();
 infos.musickits = csgoDataParser.getMusicKits();
 infos.exteriors = csgoDataParser.getExteriors();
 infos.rarities = csgoDataParser.getRarities();
-infos.baseWeapons = csgoDataParser.getWeaponsMap();
+infos.baseWeapons = csgoDataParser.getWeapons();
+infos.skins = csgoDataParser.getSkinsMap();
 
 csgoDataParser.getLogger().info('');
 csgoDataParser.getLogger().info('-----------------------------------------');

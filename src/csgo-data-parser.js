@@ -44,6 +44,22 @@ var regexIcon = /econ\/default_generated\/(.*)_(light|medium|heavy)$/i;
  * @private
   */
 var regexIconCheck = /^(?:_[^_]{2}_)/m;
+/**
+ * Regex for Check Icon of a gloves.
+ * @const {RegExp}
+ * @private
+ */
+var regexGlovesIconCheck = /^(?:_[^_])/m;
+/**
+ * @const {RegExp}
+ * @private
+ */
+var regexWeaponSkinCheck = /(^weapon_)|(_gloves$)|(_handwraps$)/m;
+/**
+ * @const {RegExp}
+ * @private
+ */
+var regexGlovesSkinCheck = /(_gloves$)|(_handwraps$)/m;
 
 /**
  * Parser of CSGOData.
@@ -52,7 +68,7 @@ var regexIconCheck = /^(?:_[^_]{2}_)/m;
  * @param {String} itemsFilePath Path to items_game file.
  * @param {String} logLevel Winston Log Level, if > info no timing data for generations.
  * @param {String} logFilePath Choosen file path to write logs.
- * @constructor 
+ * @constructor
  *
  * @todo Refactoring... This file will be too long
  * @todo Generalization isDatasInitialized
@@ -128,7 +144,7 @@ class CSGODataParser {
 		var items = this.schemaData.result.items;
 		Object.keys(items).forEach(function(key){
 			var element = items[key];
-			if (element.name.indexOf('weapon_') > -1) {
+			if (regexWeaponSkinCheck.test(element.name)) {
 				if (element.name === techName) {
 					findWeapon = self.getLangValue(element.item_name);
 				}
@@ -137,7 +153,7 @@ class CSGODataParser {
 		return findWeapon;
 	}
 
-	/**	
+	/**
 	 * Get Paint Name from technical name.
 	 * @param {String} techName technical name (like hy_xxx or sp_yyy or ...)
 	 * @return {String} Paint Name.
@@ -170,9 +186,8 @@ class CSGODataParser {
 	_getSkinsByWeapon(techName, type, indexed) {
 		/*jshint camelcase: false */
 		var self = this;
-		var skins;
+		var skins = indexed ? {} : [];
 	 	var icons = this.itemsData.items_game.alternate_icons2.weapon_icons;
-		(indexed ? skins={} : skins=[]);
 	 	Object.keys(icons).forEach(function(key){
 	 		var skin = new SkinPaint();
 	 		var datas = self._cleanCompositeIconName(icons[key].icon_path, techName);
@@ -184,8 +199,8 @@ class CSGODataParser {
 						'name':skinInfo[0],
 						'techName':datas.skinTechName,
 						'weaponTechName':techName
-					};	
-					if (type === '#CSGO_Type_Knife') {
+					};
+					if (type === 'Knife' || type === "Gloves") {
 						skins[i].fullName = '★ ' + self._getWeaponNameFromTechnicalName(techName) + ' | ' + skins[i].name;
 						skins[i].rarity = 'unusual';
 					} else {
@@ -198,7 +213,7 @@ class CSGODataParser {
 					skin.weaponTechName = techName;
 					skin.defIndex = skinInfo[1];
 					//Hack for melee weapon :s
-					if (type === '#CSGO_Type_Knife') {
+					if (type === 'Knife' || type === "Gloves") {
 						skin.fullName = '★ ' + self._getWeaponNameFromTechnicalName(techName) + ' | ' + skin.name;
 						skin.rarity = 'unusual';
 					} else {
@@ -240,7 +255,7 @@ class CSGODataParser {
 		var pos = data.indexOf(weaponTechName);
 
 		if (pos !== -1) {
-			if (data.slice(weaponTechName.length).match(regexIconCheck)) {
+			if (data.slice(weaponTechName.length).match(regexGlovesSkinCheck.test(weaponTechName) ? regexGlovesIconCheck : regexIconCheck)) {
 				result.status = true;
 				result.weaponTechName = weaponTechName;
 				result.skinTechName = data.slice(1+weaponTechName.length);
@@ -270,7 +285,7 @@ class CSGODataParser {
 						'name':self.getLangValue(self._getDefIndexOnSchema(key).item_name),
 						'techName':self._getDefIndexOnSchema(key).item_name,
 						'type':type
-					};	
+					};
 				}else{
 					var element = {};
 					element.name = self.getLangValue(self._getDefIndexOnSchema(key).item_name);
@@ -319,7 +334,7 @@ class CSGODataParser {
 		/*jshint eqeqeq: false, eqnull:true, camelcase: false*/
 	 	if (this.logger != null) {
 	 		return this.logger;
-	 	} 
+	 	}
 	}
 
 	/**
@@ -364,7 +379,7 @@ class CSGODataParser {
 			traduction = this.langData.lang.Tokens.getValue(keyLang.prepareLang());
 			if (traduction == null) {
 				traduction = keyLang;
-			} 
+			}
 		} else {
 			traduction = keyLang;
 		}
@@ -376,7 +391,7 @@ class CSGODataParser {
 	 * @return {Array.<Weapon>} List of Objects. One object represent one Weapon.
 	 * @public
 	 */
-	getWeapons(indexed) {
+	getWeapons(indexed = false) {
 		/*jshint camelcase: false */
 		var self = this;
 		var timer = misc.generateTimer();
@@ -392,30 +407,35 @@ class CSGODataParser {
 		var items = this.schemaData.result.items;
 		Object.keys(items).forEach(function(key){
 			var element = items[key];
-			if (element.name.indexOf('weapon_') > -1) {
+			if (regexWeaponSkinCheck.test(element.name)) {
+				var count = 0;
 				var timerSkins = misc.generateTimer();
 				if (indexed){
 					var i = element.defindex;
 					weapons[i] = {
 						'name':self.getLangValue(element.item_name),
 						'techName':element.name,
-						'type':self.getLangValue(element.item_type_name)
-					};	
+						'type':self.getLangValue(element.item_type_name),
+						'skins': {}
+					};
 					if (weapons[i].techName !== 'weapon_knife'){
 						weapons[i].skins=self._getSkinsByWeapon(element.name, element.item_type_name, indexed);
 					}
+					count = Object.keys(weapons[i].skins).length
 				}else{
 					var weapon = new Weapon();
 					weapon.name=self.getLangValue(element.item_name);
 					weapon.techName=element.name;
 					weapon.type=self.getLangValue(element.item_type_name);
 					weapon.defIndex=element.defindex;
+					weapon.skins = []
 					if (weapon.techName !== 'weapon_knife'){
 						weapon.skins=self._getSkinsByWeapon(element.name, element.item_type_name, indexed);
 					}
+					count = weapon.skins.length
 					weapons.push(weapon);
 				}
-				self.logger.info('Generate ' + (indexed ? weapons[i].name : weapon.name ) + ' skins list [' + misc.resultTimer(timerSkins) +'s]');
+				self.logger.info('Generate ' + (count) + ' ' + (indexed ? weapons[i].name : weapon.name ) + ' skins list [' + misc.resultTimer(timerSkins) +'s]');
 			}
 		});
 		var totalWeapons=Object.keys(weapons).length;
@@ -426,17 +446,17 @@ class CSGODataParser {
 	getWeaponsIndexed(){ return this.getWeapons(true);}
 
 	/**
-	 * Generate bases Weapons data from schema's data.
-	 * @return {Map.<Weapon>} Map of Objects. One object represent one Weapon. Where key is the weapon's fullName.
+	 * Generate all skins (weapons + gloves) from the schema's data and return a key-value map.
+	 * @return {Map.<Weapon>} Map of Objects. One object represent one skin. Where key is the skin's fullName (such as "Desert Eagle | Blaze").
 	 * @public
 	 */
-	getWeaponsMap() {
+	getSkinsMap() {
 		var self = this;
 		var timer = misc.generateTimer();
 		self.logger.info('');
 		self.logger.info('');
 		self.logger.info('-----------------------------------------');
-		self.logger.info('-------- Weapons Map Generation --------');
+		self.logger.info('-------- Skins Map Generation --------');
 		self.logger.info('-----------------------------------------');
 		self.logger.info('');
 
@@ -444,7 +464,8 @@ class CSGODataParser {
 		var items = this.schemaData.result.items;
 		Object.keys(items).forEach(function(key){
 			var element = items[key];
-			if (element.name.indexOf('weapon_') > -1) {
+			if (regexWeaponSkinCheck.test(element.name)) {
+				var count = 0
 				var timerSkins = misc.generateTimer();
 				const weapon = {
 					type: self.getLangValue(element.item_type_name),
@@ -453,11 +474,12 @@ class CSGODataParser {
 
 				if (weapon.techName !== 'weapon_knife'){
 					const skinsList = self._getSkinsByWeapon(element.name, element.item_type_name, false);
+					count = skinsList.length;
 					for (const skin of skinsList)
 						skins[skin.fullName] = {...skin, ...weapon};
 				}
 
-				self.logger.info('Generate ' + (weapon.weaponName) + ' skins list [' + misc.resultTimer(timerSkins) +'s]');
+				self.logger.info('Generate ' + (count) + ' ' + (weapon.weaponName) + ' skins list [' + misc.resultTimer(timerSkins) +'s]');
 			}
 		})
 
@@ -473,7 +495,7 @@ class CSGODataParser {
 	 * @return {Array.<Collection>} List of Collections. One object represent one Collection.
 	 * @public
 	 */
-	getCollections(indexed) {
+	getCollections(indexed = false) {
 		/*jshint camelcase: false */
 		var self = this;
 		var timer = misc.generateTimer();
@@ -505,7 +527,7 @@ class CSGODataParser {
 						'weaponTechName':values[2],
 						'fullName':self._getWeaponNameFromTechnicalName(values[2]) + ' | ' + skinInfo[0],
 						'rarity':self._getRarityFromPaintTechnicalName(values[1])
-					};	
+					};
 				}else{
 					var skin=new SkinPaint();
 					skin.name = skinInfo[0];
@@ -558,7 +580,7 @@ class CSGODataParser {
 	 * @return {Array.<Origin>} List of Origin objects. One object represent one origin.
 	 * @public
 	 */
-	getOrigins(indexed) {
+	getOrigins(indexed = false) {
 		/*jshint camelcase: false */
 		var self = this;
 		var timer = misc.generateTimer();
@@ -592,9 +614,9 @@ class CSGODataParser {
 	 * @return {Array.<Prefab>} List of Object. One object represent one case
 	 * @public
 	 */
-	getCases(indexed) {
+	getCases(indexed = false) {
 		var self = this;
-		
+
 		self.logger.info('');
 		self.logger.info('');
 		self.logger.info('-----------------------------------------');
@@ -615,23 +637,23 @@ class CSGODataParser {
 		}
 		case1 = this._getItemsByPrefabViaSchema('weapon_case', 'case', indexed);
 		case2 = this._getItemsByPrefabViaSchema('weapon_case_base', 'case', indexed);
-		
+
 		for (var attrname1 in case1) { if (case1.hasOwnProperty(attrname1)) { cases[attrname1] = case1[attrname1]; }}
 		for (var attrname2 in case2) { if (case2.hasOwnProperty(attrname2)) { cases[attrname2] = case2[attrname2]; }}
 		return cases;
-	
+
 	}
 	getCasesIndexed(){ return this.getCases(true);}
 
 	/**
 	 * Generate Weapon/Stickers skin Case keys list.
-	 * @return {Array.<Prefab>} List of Object. One object represent one case key 
+	 * @return {Array.<Prefab>} List of Object. One object represent one case key
 	 * @public
 	 */
-	getCaseKeys(indexed) {
+	getCaseKeys(indexed = false) {
 		var casekeys = [];
 		var self = this;
-		
+
 		self.logger.info('');
 		self.logger.info('');
 		self.logger.info('-----------------------------------------');
@@ -651,7 +673,7 @@ class CSGODataParser {
 	 * @return {Array.<Sticker>} List of Sticker. One object represent one sticker
 	 * @public
 	 */
-	getStickers(indexed) {
+	getStickers(indexed = false) {
 		/*jshint eqeqeq: false, eqnull:true, camelcase: false */
 		var self = this;
 		var timer = misc.generateTimer();
@@ -679,7 +701,7 @@ class CSGODataParser {
 						'name':self.getLangValue(rawstickers[key].item_name),
 						'techName':rawstickers[key].name,
 						'item_rarity':rarity
-					};	
+					};
 				}else{
 					var sticker=new Sticker();
 					sticker.name=self.getLangValue(rawstickers[key].item_name);
@@ -700,7 +722,7 @@ class CSGODataParser {
 		self.logger.info('-----------------------------------------');
 		self.logger.info('Generate ' + totalStickers + ' stickers [' + misc.resultTimer(timer) +'s]');
 		return stickers;
-	} 
+	}
 	getStickersIndexed(){ return this.getStickers(true);}
 	getStickersMap() {
 		/*jshint eqeqeq: false, eqnull:true, camelcase: false */
@@ -738,13 +760,13 @@ class CSGODataParser {
 		self.logger.info('Generate ' + totalStickers + ' stickers [' + misc.resultTimer(timer) +'s]');
 		return stickers;
 	}
-	
+
 	/**
 	 * Generate MusicKits list.
 	 * @return {Array.<MusicKit>} List of MusicKit. One object represent one music kit
 	 * @public
 	 */
-	getMusicKits(indexed) {
+	getMusicKits(indexed = false) {
 		/*jshint camelcase: false */
 		var self = this;
 		var timer = misc.generateTimer();
@@ -756,7 +778,7 @@ class CSGODataParser {
 		self.logger.info('');
 		var rawmusics = this.itemsData.items_game.music_definitions;
 		var musics;
-		
+
 		(indexed ? musics={} : musics=[]);
 		Object.keys(rawmusics).forEach(function(key){
 			//Remove the default CS:GO Musics by remove 1&2 key
@@ -766,8 +788,8 @@ class CSGODataParser {
 					musics[key] = {
 						'name':self.getLangValue(rawmusics[key].loc_name),
 						'techName':rawmusics[key].name
-					};	
-				}else{				
+					};
+				}else{
 					var music = new MusicKit();
 					music.name = self.getLangValue(rawmusics[key].loc_name);
 					music.techName = rawmusics[key].name;
@@ -784,13 +806,13 @@ class CSGODataParser {
 		return musics;
 	}
 	getMusicKitsIndexed(){ return this.getMusicKits(true);}
-	
+
 	/**
 	 * Generate Rarities index.
 	 * @return {Array.<Rarity>} List of Rarity objects. One object represent one rarity.
 	 * @public
 	 */
-	getRarities(indexed) {
+	getRarities(indexed = false) {
 		/*jshint camelcase: false */
 		var self = this;
 		var timer = misc.generateTimer();
@@ -803,14 +825,14 @@ class CSGODataParser {
 		var rawrarities = this.itemsData.items_game.rarities;
 		var rawcolors = this.itemsData.items_game.colors;
 		var rarities;
-		
+
 		(indexed ? rarities={} : rarities=[]);
 		Object.keys(rawrarities).forEach(function(key){
 			var timerRarity = misc.generateTimer();
 			//Hack for melee weapon :s
 			var wepName
 			if (rawrarities[key].loc_key_weapon === 'Rarity_Unusual') {
-				wepName = '★ ' + self.getLangValue('RI_M'); 
+				wepName = '★ ' + self.getLangValue('RI_M');
 			} else {
 				wepName = self.getLangValue(rawrarities[key].loc_key_weapon);
 			}
@@ -821,8 +843,8 @@ class CSGODataParser {
 					'weaponName':wepName,
 					'miscName':self.getLangValue(rawrarities[key].loc_key),
 					'color':rawcolors[rawrarities[key].color].hex_color
-				};	
-			}else{			
+				};
+			}else{
 				var rarity = new Rarity();
 				rarity.weaponName=wepName;
 				rarity.techName=key;
