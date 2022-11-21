@@ -10,8 +10,8 @@
  */
 Object.defineProperty(Object.prototype, 'getValue', {
     value: function (prop) {
-        var self = this;
-        for (var key in self) {
+        const self = this;
+        for (const key in self) {
             if (key.toLowerCase() === prop.toLowerCase()) {
                 return self[key];
             }
@@ -29,9 +29,9 @@ Object.defineProperty(Object.prototype, 'getValue', {
  */
 Object.defineProperty(String.prototype, 'prepareLang', {
 	value: function() {
-		var self=this;
+		let self = this;
 		if (self.charAt(0) === '#') {
-			self=self.slice(1);
+			self = self.slice(1);
 		}
 		return self;
 	}
@@ -45,9 +45,9 @@ Object.defineProperty(String.prototype, 'prepareLang', {
  */
 Object.defineProperty(Array.prototype, 'pushUnique', {
 	value: function(value) {
-		var self=this;
-		var isPresent = false;
-		for (var key in self) {
+		const self=this;
+		let isPresent = false;
+		for (const key in self) {
 			if (value === self[key]) {
 				isPresent = true;
 			}
@@ -66,9 +66,9 @@ Object.defineProperty(Array.prototype, 'pushUnique', {
  */
 Object.defineProperty(Array.prototype, 'pushUniqueNamedObject', {
 	value: function(value) {
-		var self=this;
-		var isPresent = false;
-		for (var key in self) {
+		const self=this;
+		let isPresent = false;
+		for (const key in self) {
 			if (value.name === self[key].name) {
 				isPresent = true;
 			}
@@ -89,10 +89,10 @@ Object.defineProperty(Array.prototype, 'pushUniqueNamedObject', {
  */
 Object.defineProperty(String.prototype, 'containsOnSpaceSplit', {
 	value: function(value) {
-		var self=this;
-		var splitArray=self.split(' ');
-		var isPresent = false;
-		for (var key in splitArray) {
+		const self=this;
+		const splitArray=self.split(' ');
+		let isPresent = false;
+		for (const key in splitArray) {
 			if (splitArray[key] === value) {
 				isPresent = true;
 			}
@@ -117,7 +117,7 @@ exports.generateTimer = function(){
  * @private
  */
 exports.resultTimer = function(timer){
-    var diff = process.hrtime(timer);
+    const diff = process.hrtime(timer);
     return ((diff[0]*1e9+diff[1])*1e-9).toFixed(4);
 };
 
