@@ -408,6 +408,7 @@ class CSGODataParser {
 			if (regexWeaponSkinCheck.test(element.name)) {
 				let count = 0;
 				const timerSkins = misc.generateTimer();
+				let name;
 				if (indexed) {
 					const i = element.defindex;
 					weapons[i] = {
@@ -420,6 +421,7 @@ class CSGODataParser {
 						weapons[i].skins = self._getSkinsByWeapon(element.name, element.item_type_name, indexed);
 					}
 					count = Object.keys(weapons[i].skins).length
+					name = weapons[i].name;
 				} else {
 					const weapon = new Weapon();
 					weapon.name = self.getLangValue(element.item_name);
@@ -432,8 +434,9 @@ class CSGODataParser {
 					}
 					count = weapon.skins.length
 					weapons.push(weapon);
+					name = weapon.name;
 				}
-				self.logger.info('Generate ' + (count) + ' ' + (indexed ? weapons[i].name : weapon.name ) + ' skins list [' + misc.resultTimer(timerSkins) +'s]');
+				self.logger.info('Generate ' + (count) + ' ' + (name) + ' skins list [' + misc.resultTimer(timerSkins) +'s]');
 			}
 		});
 		const totalWeapons=Object.keys(weapons).length;
@@ -692,6 +695,7 @@ class CSGODataParser {
 			//Remove the default Sticker by remove 0 key
 			if (key !== '0') {
 				const timerStickers = misc.generateTimer();
+				let name;
 				if (indexed) {
 					let rarity;
 					if (rawstickers[key].item_rarity == null) {
@@ -704,6 +708,7 @@ class CSGODataParser {
 						'techName':rawstickers[key].name,
 						'item_rarity':rarity
 					};
+					name = stickers[key].name;
 				} else {
 					const sticker = new Sticker();
 					sticker.name = self.getLangValue(rawstickers[key].item_name);
@@ -715,8 +720,9 @@ class CSGODataParser {
 						sticker.rarity=rawstickers[key].item_rarity;
 					}
 					stickers.pushUniqueNamedObject(sticker);
+					name = sticker.name;
 				}
-				self.logger.info('Fetch ' + (indexed ? stickers[key].name : sticker.name )+ ' sticker [' + misc.resultTimer(timerStickers) +'s]');
+				self.logger.info('Fetch ' + (name) + ' sticker [' + misc.resultTimer(timerStickers) +'s]');
 			}
 		});
 
@@ -786,19 +792,22 @@ class CSGODataParser {
 			//Remove the default CS:GO Musics by remove 1&2 key
 			if (key !== '1' && key !== '2') {
 				const timerMusics = misc.generateTimer();
+				let name;
 				if (indexed) {
 					musics[key] = {
 						'name':self.getLangValue(rawmusics[key].loc_name),
 						'techName':rawmusics[key].name
 					};
+					name = musics[key].name
 				} else {
 					const music = new MusicKit();
 					music.name = self.getLangValue(rawmusics[key].loc_name);
 					music.techName = rawmusics[key].name;
 					music.defIndex = key;
 					musics.pushUniqueNamedObject(music);
+					name = music.name
 				}
-				self.logger.info('Fetch ' + (indexed ? musics[key].name : music.name ) + ' music kit [' + misc.resultTimer(timerMusics) +'s]');
+				self.logger.info('Fetch ' + name + ' music kit [' + misc.resultTimer(timerMusics) +'s]');
 			}
 		});
 
