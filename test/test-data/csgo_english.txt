@@ -2955,6 +2955,10 @@
 		"CSGO_Collectible_MapTokenPrime_Desc"			""
 		"CSGO_Collectible_MapTokenBlagai"				"Blagai Map Coin"
 		"CSGO_Collectible_MapTokenBlagai_Desc"			""
+		"CSGO_Collectible_MapTokenBoyard"				"Boyard Map Coin"
+		"CSGO_Collectible_MapTokenBoyard_Desc"			""
+		"CSGO_Collectible_MapTokenChalice"				"Chalice Map Coin"
+		"CSGO_Collectible_MapTokenChalice_Desc"			""
 
 		"CSGO_CollectibleCoin_FortiusQuoFidelius"	"Loyalty Badge"
 		"CSGO_CollectibleCoin_FortiusQuoFidelius_Desc"	"This badge commemorates loyal membership in the Counter-Strike community prior to the Danger Zone update. <i>Strength through loyalty.</i>"
@@ -26579,6 +26583,9 @@
 		"SFUI_Map_de_blagai"	"Blagai"
 		"SFUI_Map_de_tuscan"	"Tuscan"
 
+		"SFUI_Map_de_boyard"	"Boyard"
+		"SFUI_Map_de_chalice"	"Chalice"
+
 		"SFUI_Map_de_mutiny"		"Mutiny"
 		"SFUI_Map_de_swamp"			"Swamp"
 		"SFUI_Map_de_anubis"		"Anubis"
@@ -28831,6 +28838,9 @@
 
 		"CSGO_Collectible_GlobalGeneral2022"		"2022 Service Medal"
 		"CSGO_Collectible_Desc_GlobalGeneral2022"	"Awarded for outstanding service and achievement in 2022."
+
+		"CSGO_Collectible_GlobalGeneral2023"		"2023 Service Medal"
+		"CSGO_Collectible_Desc_GlobalGeneral2023"	"Awarded for outstanding service and achievement in 2023."
 
 		//for main menu display
 		"SFUI_XP_Bonus_1"							"Weekly XP bonus boost available!"
@@ -34064,6 +34074,7 @@
 
 		"SFUI_LoginPerfectWorld_AntiAddiction1"			"Your account is under the age of 18 years old and subject to the Anti-Addiction System." // 您的年龄未满18岁，正受到“防沉迷系统”的限制。
 		"SFUI_LoginPerfectWorld_AntiAddiction2"			"Your account information is incomplete, and you are subject to the Anti-Addiction System. After a period of time, your game functionality will be limited. It is recommended that you immediately fill out your account information on the official Perfect World account settings website." // 您尚未登记防沉迷信息，一段时间后游戏收益将受到限制，建议您立即前往CSGO官网个人中心补全信息。
+		"SFUI_LoginPerfectWorld_Offline20221206"		"亲爱的玩家：为响应相关通知，CS:GO将于2022年12月6日（周二）0:00 – 23:59停服一天，感谢各位玩家的支持。"
 
 		"SFUI_LoginPerfectWorld_Title_Info"				"Account Information"
 		"SFUI_LoginPerfectWorld_Error_Launcher"			"Your game launch configuration doesn't match your account configuration.\n\nPlease contact Customer Support."
