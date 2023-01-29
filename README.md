@@ -39,9 +39,9 @@ var csgoDataParser = new parser(schemaFilePath, langFilePath, itemsFilePath, 'de
 
 Must pass schema file (like *schema.txt*), language file (like *csgo_english.txt*) and item file (like *item_data.txt*) at VDF format
 
-- **Schema file** can be find in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchema_v2)
-- **Language file** can be find in game data files (*steam-data*/csgo/resource/csgo_*language*.txt)
-- **Items File** can be find both in game data files () and in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchemaURL_v2) (Note : You need do get the items_game_url information)
+- **Schema file** can be find in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchema_v2) or as a JSON on api.steampowered.com using your web API key (https://api.steampowered.com/IEconItems_730/GetSchema/v2/?key=<API_KEY>&language=en)
+- **Language file** can be find in game data files (*steam-data*/csgo/resource/csgo_*language*.txt) or on Github [GameTracking-CSGO](https://github.com/SteamDatabase/GameTracking-CSGO/blob/master/csgo/resource/csgo_english.txt)
+- **Items File** can be find both in game data files () and in [Steam API](https://lab.xpaw.me/steam_api_documentation.html#IEconItems_730_GetSchemaURL_v2) (Note : You need do get the items_game_url information) or safely on Github [GameTracking-CSGO](https://github.com/SteamDatabase/GameTracking-CSGO/blob/master/csgo/scripts/items/items_game.txt)
 
 ### Example
 
@@ -55,6 +55,7 @@ A sample script is at `example.js`.
     * [.isDatasInitialized()](#CSGODataParser+isDatasInitialized) ⇒ <code>boolean</code>
     * [.isLangInitialized()](#CSGODataParser+isLangInitialized) ⇒ <code>boolean</code>
     * [.getLangValue(keyLang)](#CSGODataParser+getLangValue) ⇒ <code>String</code>
+    * [.getSkinsMap()](#CSGODataParser+getSkinsMap) ⇒ <code>{[key: string]: Weapon}</code>
     * [.getWeapons()](#CSGODataParser+getWeapons) ⇒ <code>Array.&lt;Weapon&gt;</code>
     * [.getCollections()](#CSGODataParser+getCollections) ⇒ <code>Array.&lt;Collection&gt;</code>
     * [.getExteriors()](#CSGODataParser+getExteriors) ⇒ <code>Array.&lt;String&gt;</code>
@@ -108,6 +109,14 @@ Get the lang value from valve key i18n values.
 | --- | --- | --- |
 | keyLang | <code>String</code> | valve key i18n values (like #PaintKit_aa_fade_Tag) |
 
+<a name="CSGODataParser+getSkinsMap"></a>
+### csgoDataParser.getSkinsMap() ⇒ <code>{[key: string]: Weapon}</code>
+Generate a key-value map of all weapon skins (including rifles, knives, gloves and hand wraps).
+
+**Kind**: instance method of <code>[CSGODataParser](#CSGODataParser)</code>  
+**Returns**: <code>{[key: string]: Weapon}</code> - key-value map, where key is the skin's `fullName`
+             (such as `"Desert Eagle | Blaze"`) and the value is the `Weapon` object.  
+**Access:** public
 <a name="CSGODataParser+getWeapons"></a>
 ### csgoDataParser.getWeapons() ⇒ <code>Array.&lt;Weapon&gt;</code>
 Generate bases Weapons data from schema's data.

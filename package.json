@@ -6,17 +6,19 @@
   "readmeFilename": "README.md",
   "private": false,
   "directories": {},
+  "typings": "types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git://github.com/Ballrock/node-csgo-parser.git"
   },
   "dependencies": {
+    "simple-vdf": "^1.1.1",
     "vdf": "^0.0.2",
     "winston": "^2.1.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.4.0",
-    "babel-preset-es2015": "^6.3.13",
+    "@babel/cli": "^7.19.3",
+    "@babel/preset-env": "^7.20.2",
     "chai": "*",
     "codeclimate-test-reporter": "^0.1.1",
     "istanbul": "^0.4.1",
@@ -30,7 +32,7 @@
     "test": "istanbul cover node_modules/mocha/bin/_mocha ./test/*.js -- -R spec ",
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
     "generate-docs-md": "node_modules/.bin/jsdoc2md \"src/csgo-data-parser.js\" > out/docs/api.md",
-    "compile": "node_modules/.bin/babel --presets es2015 src -d lib",
+    "compile": "node_modules/.bin/babel src -d lib",
     "prepublish": "npm run compile",
     "pretest": "npm run compile"
   },
