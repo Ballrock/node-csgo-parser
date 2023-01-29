@@ -280,12 +280,14 @@ class CSGODataParser {
 		const itemsPrefab = this.itemsData.items_game.items;
 		Object.keys(itemsPrefab).forEach(function(key) {
 			if (typeof itemsPrefab[key].prefab === 'string' && itemsPrefab[key].prefab.containsOnSpaceSplit(prefab)) {
+				let name = ""
 				if (indexed) {
 					itemsReturn[key] = {
 						'name':self.getLangValue(self._getDefIndexOnSchema(key).item_name),
 						'techName':self._getDefIndexOnSchema(key).item_name,
 						'type':type
 					};
+					name = itemsReturn[key].name;
 				} else {
 					const element = {};
 					element.name = self.getLangValue(self._getDefIndexOnSchema(key).item_name);
@@ -293,8 +295,9 @@ class CSGODataParser {
 					element.defIndex = key;
 					element.type = type;
 					itemsReturn.pushUniqueNamedObject(element);
+					name = element.name;
 				}
-				self.logger.info('Fetch ' + (indexed ? itemsReturn[key].name : element.name ) + ' [' + misc.resultTimer(timer) +'s]');
+				self.logger.info('Fetch ' + name + ' [' + misc.resultTimer(timer) +'s]');
 			}
 		});
 		const totalPrefab = Object.keys(itemsReturn).length;
