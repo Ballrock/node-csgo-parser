@@ -732,6 +732,10 @@ class CSGODataParser {
 		return stickers;
 	}
 	getStickersIndexed() { return this.getStickers(true);}
+
+	/**
+	 * @returns {Map.<Sticker>} Stickers map
+	 */
 	getStickersMap() {
 		/*jshint eqeqeq: false, eqnull:true, camelcase: false */
 		const self = this;

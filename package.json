@@ -6,6 +6,7 @@
   "readmeFilename": "README.md",
   "private": false,
   "directories": {},
+  "typings": "types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git://github.com/Ballrock/node-csgo-parser.git"
