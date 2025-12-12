@@ -1,9 +1,7 @@
 # Node-CSGO-Parser
 
-[![Build Status](https://api.travis-ci.org/Ballrock/node-csgo-parser.svg?branche=master)](https://travis-ci.org/Ballrock/node-csgo-parser)
-[![Code Climate](https://codeclimate.com/github/Ballrock/node-csgo-parser/badges/gpa.svg)](https://codeclimate.com/github/Ballrock/node-csgo-parser)
-[![Test Coverage](https://codeclimate.com/github/Ballrock/node-csgo-parser/badges/coverage.svg)](https://codeclimate.com/github/Ballrock/node-csgo-parser/coverage)
-[![Issue Count](https://codeclimate.com/github/Ballrock/node-csgo-parser/badges/issue_count.svg)](https://codeclimate.com/github/Ballrock/node-csgo-parser)
+[![CI](https://github.com/Ballrock/node-csgo-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/Ballrock/node-csgo-parser/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/node-csgo-parser.svg)](https://www.npmjs.com/package/node-csgo-parser)
 [![npm](https://img.shields.io/npm/dt/node-csgo-parser.svg)](https://www.npmjs.com/package/node-csgo-parser)
 
 Extract Items/Skins/... from raw VDF data files
